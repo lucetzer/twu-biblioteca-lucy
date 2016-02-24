@@ -27,7 +27,7 @@
     <favorites_list name="biblioteca" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5456">
+    <splitter split-orientation="horizontal" split-proportion="0.4808">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
@@ -64,8 +64,8 @@
           <file leaf-file-name="testMainMenu.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6768293">
-                  <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+                <state vertical-scroll-proportion="0.7865854">
+                  <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#461#462#0" expanded="true" />
@@ -94,8 +94,8 @@
           <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.73170733">
-                  <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.7621951">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding>
                     <element signature="e#122#130#0" expanded="true" />
                   </folding>
@@ -122,8 +122,8 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/WelcomeUserTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/WelcomeUser.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java" />
       </list>
     </option>
   </component>
@@ -270,7 +270,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testMainMenu.testInvalidOption">
+  <component name="RunManager" selected="JUnit.testMainMenu.testQuitOption">
     <configuration default="false" name="testMainMenu.testPrintMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -311,26 +311,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="testMainMenu.testSelectFromMenuError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testMainMenu" />
-      <option name="METHOD_NAME" value="testSelectFromMenuError" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="testMainMenu.testInvalidSelection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -358,6 +338,26 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testMainMenu" />
       <option name="METHOD_NAME" value="testInvalidOption" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="testMainMenu.testQuitOption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testMainMenu" />
+      <option name="METHOD_NAME" value="testQuitOption" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -495,17 +495,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.testMainMenu.testPrintMenu" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.testMainMenu.testSelectFromMenu" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.testMainMenu.testSelectFromMenuError" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidSelection" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidOption" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidSelection" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidOption" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu.testQuitOption" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidOption" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.testMainMenu.testSelectFromMenu" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.testMainMenu.testPrintMenu" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidSelection" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu.testSelectFromMenuError" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.testMainMenu.testQuitOption" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidOption" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.testMainMenu.testSelectFromMenu" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.testMainMenu.testPrintMenu" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu.testInvalidSelection" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -538,14 +538,14 @@
     <history-entry file="testMainMenu_testPrintMenu - 2016.02.24 at 12h 32m 08s.xml">
       <configuration name="testMainMenu.testPrintMenu" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testMainMenu_testQuitOption - 2016.02.24 at 12h 49m 52s.xml">
+      <configuration name="testMainMenu.testQuitOption" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="testMainMenu_testSelectFromMenu - 2016.02.24 at 12h 05m 39s.xml">
       <configuration name="testMainMenu.testSelectFromMenu" configurationId="JUnit" />
     </history-entry>
     <history-entry file="testMainMenu_testSelectFromMenu - 2016.02.24 at 12h 34m 25s.xml">
       <configuration name="testMainMenu.testSelectFromMenu" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testMainMenu_testSelectFromMenuError - 2016.02.24 at 11h 08m 04s.xml">
-      <configuration name="testMainMenu.testSelectFromMenuError" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -720,6 +720,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/WelcomeUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/WelcomeUserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -736,34 +744,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/WelcomeUser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.7621951">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6768293">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.7865854">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#461#462#0" expanded="true" />
             <element signature="e#519#520#0" expanded="true" />
             <element signature="e#566#567#0" expanded="true" />
             <element signature="e#601#602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73170733">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#122#130#0" expanded="true" />
           </folding>
         </state>
       </provider>

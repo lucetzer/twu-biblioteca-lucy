@@ -44,6 +44,12 @@ public class testMainMenu {
         assertEquals("Select a valid option!", outContent.toString());
     }
 
+    @Test
+    public void testQuitOption() {
+        menu.selectFromMenu(2);
+        assertEquals("Goodbye", outContent.toString());
+    }
+
 
 
 
