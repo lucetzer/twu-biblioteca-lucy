@@ -34,7 +34,8 @@ public class testMainMenu {
     @Test
     public void testSelectFromMenu() {
         WelcomeUserTest user = new WelcomeUserTest();
-        assertEquals(user.bookList, menu.selectFromMenu("List books"));
+        menu.selectFromMenu("List books");
+        assertEquals(user.bookList, outContent.toString());
     }
 
 
