@@ -6,7 +6,7 @@ public class MainMenu {
 
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
 
-    public Map<String, String> bookList = new TreeMap<String, String>() {{
+    Map<String, String> bookList = new TreeMap<String, String>() {{
         put("1. The Prophet", "Kahlil Gibran, 1923");
         put("2. To Kill a Mockingbird", "Harper Lee, 1960");
         put("3. The Catcher in the Rye", "J.D. Salinger, 1951");
