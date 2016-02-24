@@ -7,7 +7,7 @@ public class MainMenu {
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
 
     public void printMenu() {
-        System.out.println("Main Menu");
+        System.out.println("MAIN MENU");
         for (String item : menuItems) {
             System.out.println(item);
         }
