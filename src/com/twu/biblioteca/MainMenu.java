@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MainMenu {
 
-    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
+    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("1. List Books"));
 
     public void printMenu() {
         System.out.println("MAIN MENU");
@@ -13,10 +13,12 @@ public class MainMenu {
         }
     }
 
-    public void selectFromMenu(String option) {
-        if (option.equals("List books")) {
+    public void selectFromMenu(int option) {
+        if (option == 1) {
             WelcomeUser user = new WelcomeUser();
             user.printBookList();
+        } else {
+            System.out.print("Select a valid option!");
         }
     }
 

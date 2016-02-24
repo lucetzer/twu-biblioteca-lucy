@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 
 public class testMainMenu {
-    String menuOptions = "MAIN MENU\nList Books\n";
+    String menuOptions = "MAIN MENU\n1. List Books\n";
     MainMenu menu = new MainMenu();
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -34,24 +34,18 @@ public class testMainMenu {
     @Test
     public void testSelectFromMenu() {
         WelcomeUserTest user = new WelcomeUserTest();
-        menu.selectFromMenu("List books");
+        menu.selectFromMenu(1);
         assertEquals(user.bookList, outContent.toString());
     }
 
-    @Test (expected = RuntimeException.class)
-    public void testSelectFromMenuError() {
-        try {
-            menu.selectFromMenu("invalid option");
-        }
-        catch(RuntimeException re) {
-            String message = "That option is not available. Please select a valid option";
-            assertEquals(message, re.getMessage());
-            throw re;
-        }
-        fail("Invalid option did not throw!");
+    @Test
+    public void testInvalidOption() {
+        menu.selectFromMenu(8);
+        assertEquals("Select a valid option!", outContent.toString());
     }
 
-    private void fail(String s) {
-    }
+
+
+
 
 }
