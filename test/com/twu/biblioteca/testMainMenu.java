@@ -12,11 +12,11 @@ public class testMainMenu {
     String menuOptions = "MAIN MENU\n1. List Books\n";
     MainMenu menu = new MainMenu();
     String bookList = "Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR\n" +
-        "The Prophet                Kahlil Gibran    1923\n" +
-        "To Kill a Mockingbird      Harper Lee       1960\n" +
-        "The Catcher in the Rye     J.D. Salinger    1951\n" +
-        "The Social Animal          David Brooks     2011\n" +
-        "Life of Pi                 Yann Martel      2001\n";
+        "1. The Prophet             Kahlil Gibran    1923\n" +
+        "2. To Kill a Mockingbird   Harper Lee       1960\n" +
+        "3. The Catcher in the Rye  J.D. Salinger    1951\n" +
+        "4. The Social Animal       David Brooks     2011\n" +
+        "5. Life of Pi              Yann Martel      2001\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -38,13 +38,12 @@ public class testMainMenu {
 
     @Test
     public void testSelectFromMenu() {
-        UserTest user = new UserTest();
         menu.selectFromMenu(1);
         assertEquals(bookList, outContent.toString());
     }
 
     @Test
-    public void testprintBookList() {
+    public void testPrintBookList() {
         menu.printBookList();
         assertEquals(bookList, outContent.toString());
     }
@@ -59,6 +58,13 @@ public class testMainMenu {
     public void testQuitOption() {
         menu.selectFromMenu(2);
         assertEquals("Goodbye!", outContent.toString());
+    }
+
+    @Test
+    public void testAddMenuItem() {
+        menu.addMenuItem("Quit");
+        menu.printMenu();
+        assertEquals("MAIN MENU\n1. List Books\n2. Quit\n", outContent.toString());
     }
 
 }

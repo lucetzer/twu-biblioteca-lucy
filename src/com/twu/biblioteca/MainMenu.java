@@ -4,14 +4,14 @@ import java.util.*;
 
 public class MainMenu {
 
-    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("1. List Books"));
+    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
 
-    public Map<String, String> bookList = new HashMap<String, String>() {{
-        put("The Catcher in the Rye", "J.D. Salinger, 1951");
-        put("To Kill a Mockingbird", "Harper Lee, 1960");
-        put("Life of Pi", "Yann Martel, 2001");
-        put("The Prophet", "Kahlil Gibran, 1923");
-        put("The Social Animal", "David Brooks, 2011");
+    public Map<String, String> bookList = new TreeMap<String, String>() {{
+        put("1. The Prophet", "Kahlil Gibran, 1923");
+        put("2. To Kill a Mockingbird", "Harper Lee, 1960");
+        put("3. The Catcher in the Rye", "J.D. Salinger, 1951");
+        put("4. The Social Animal", "David Brooks, 2011");
+        put("5. Life of Pi", "Yann Martel, 2001");
     }};
 
     public void printBookList() {
@@ -26,9 +26,15 @@ public class MainMenu {
 
     public void printMenu() {
         System.out.println("MAIN MENU");
+        int index = 0;
         for (String item : menuItems) {
-            System.out.println(item);
+            index += 1;
+            System.out.println(index + ". " + item);
         }
+    }
+
+    public void addMenuItem(String item) {
+        menuItems.add(item);
     }
 
     public void selectFromMenu(int option) {
