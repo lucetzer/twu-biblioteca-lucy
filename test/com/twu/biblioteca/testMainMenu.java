@@ -26,8 +26,16 @@ public class testMainMenu {
     }
 
     @Test
-    public void printMenu() {
+    public void testPrintMenu() {
         menu.printMenu();
         assertEquals(menuOptions, outContent.toString());
     }
+
+    @Test
+    public void testSelectFromMenu() {
+        WelcomeUserTest user = new WelcomeUserTest();
+        assertEquals(user.bookList, menu.selectFromMenu("List books"));
+    }
+
+
 }

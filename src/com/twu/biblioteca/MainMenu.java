@@ -5,6 +5,8 @@ import java.util.*;
 public class MainMenu {
 
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
+    String selection;
+
 
     public void printMenu() {
         System.out.println("Main Menu");
@@ -13,5 +15,9 @@ public class MainMenu {
         }
     }
 
+    public String selectFromMenu(String option) {
+        selection = option;
+        return selection;
+    }
 
 }
