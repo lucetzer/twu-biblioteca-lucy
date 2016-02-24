@@ -11,9 +11,14 @@ import static org.junit.Assert.assertEquals;
 public class testMainMenu {
     String menuOptions = "MAIN MENU\n1. List Books\n";
     MainMenu menu = new MainMenu();
+    String bookList = "Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR\n" +
+        "The Prophet                Kahlil Gibran    1923\n" +
+        "To Kill a Mockingbird      Harper Lee       1960\n" +
+        "The Catcher in the Rye     J.D. Salinger    1951\n" +
+        "The Social Animal          David Brooks     2011\n" +
+        "Life of Pi                 Yann Martel      2001\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-
 
     @Before
     public void setUpStreams() {
@@ -33,9 +38,15 @@ public class testMainMenu {
 
     @Test
     public void testSelectFromMenu() {
-        WelcomeUserTest user = new WelcomeUserTest();
+        UserTest user = new UserTest();
         menu.selectFromMenu(1);
-        assertEquals(user.bookList, outContent.toString());
+        assertEquals(bookList, outContent.toString());
+    }
+
+    @Test
+    public void testprintBookList() {
+        menu.printBookList();
+        assertEquals(bookList, outContent.toString());
     }
 
     @Test
@@ -47,11 +58,7 @@ public class testMainMenu {
     @Test
     public void testQuitOption() {
         menu.selectFromMenu(2);
-        assertEquals("Goodbye", outContent.toString());
+        assertEquals("Goodbye!", outContent.toString());
     }
-
-
-
-
 
 }
