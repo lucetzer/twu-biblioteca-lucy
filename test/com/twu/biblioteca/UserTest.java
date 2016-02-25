@@ -35,10 +35,17 @@ public class UserTest {
 
     @Test
     public void testCheckOutBook() {
-        String newList = "You have successfully checked out THE SOCIAL ANIMAL. Thank you! Enjoy the book.";
+        String message = "You have successfully checked out THE SOCIAL ANIMAL. Thank you! Enjoy the book.";
         user.checkOutBook(menu, "The social animal");
         assertEquals(false, menu.bookList.containsKey("THE SOCIAL ANIMAL"));
-        assertEquals(newList, outContent.toString());
+        assertEquals(message, outContent.toString());
+    }
+
+    @Test
+    public void testUnsuccessfulCheckout() {
+        String message = "That book is unavailable. Please select a book from the list.";
+        user.checkOutBook(menu, "The Unknown Book");
+        assertEquals(message, outContent.toString());
     }
 
 }
