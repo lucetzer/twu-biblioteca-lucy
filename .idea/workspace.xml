@@ -43,11 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+                <state vertical-scroll-proportion="0.8307087">
+                  <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#620#621#0" expanded="true" />
@@ -61,11 +61,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testMainMenu.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="testMainMenu.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.83179724">
-                  <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#882#883#0" expanded="true" />
@@ -99,8 +99,8 @@
           <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.6612903">
-                  <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.79330707">
+                  <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
                   <folding>
                     <element signature="e#122#130#0" expanded="true" />
                     <element signature="e#627#635#0" expanded="true" />
@@ -133,8 +133,8 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/userTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" />
       </list>
     </option>
   </component>
@@ -146,8 +146,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-41" />
-    <option name="y" value="127" />
+    <option name="x" value="-13" />
+    <option name="y" value="128" />
     <option name="width" value="1475" />
     <option name="height" value="805" />
   </component>
@@ -281,7 +281,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest.testReturnBook">
+  <component name="RunManager" selected="JUnit.UserTest.testUnsuccessfulReturnBook">
     <configuration default="false" name="UserTest.testCheckOutBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -302,14 +302,34 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="UserTest.testReturnBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testReturnBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserTest.testUnsuccessfulReturnBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
+      <option name="METHOD_NAME" value="testUnsuccessfulReturnBook" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -342,33 +362,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="testMainMenu.testPrintBookList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="testMainMenu.testreturnunsuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testMainMenu" />
-      <option name="METHOD_NAME" value="testPrintBookList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserTest.testReturnBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
-      <option name="METHOD_NAME" value="testReturnBook" />
+      <option name="METHOD_NAME" value="testreturnunsuccessful" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -505,18 +505,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBook" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.testMainMenu.testPrintBookList" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.testReturnBook" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testReturnBook" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulReturnBook" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu.testreturnunsuccessful" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.testReturnBook" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBook" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.testMainMenu.testPrintBookList" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulReturnBook" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.testMainMenu.testreturnunsuccessful" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testReturnBook" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBook" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -528,39 +528,39 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TestHistory">
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 52m 17s.xml">
+    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 17h 22m 41s.xml">
       <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 52m 57s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 17h 22m 38s.xml">
+      <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 53m 57s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulReturnBook - 2016.02.25 at 17h 24m 23s.xml">
+      <configuration name="UserTest.testUnsuccessfulReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 54m 14s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulReturnBook - 2016.02.25 at 18h 03m 07s.xml">
+      <configuration name="UserTest.testUnsuccessfulReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 55m 01s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulReturnBook - 2016.02.25 at 18h 04m 25s.xml">
+      <configuration name="UserTest.testUnsuccessfulReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 16h 59m 20s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulReturnBook - 2016.02.25 at 18h 13m 48s.xml">
+      <configuration name="UserTest.testUnsuccessfulReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 17h 02m 27s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="UserTest_testUnsuccessfulReturnBook - 2016.02.25 at 18h 13m 57s.xml">
+      <configuration name="UserTest.testUnsuccessfulReturnBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 17h 04m 34s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="testMainMenu_testreturnunsuccessful - 2016.02.25 at 18h 11m 52s.xml">
+      <configuration name="testMainMenu.testreturnunsuccessful" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 17h 06m 10s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="testMainMenu_testreturnunsuccessful - 2016.02.25 at 18h 13m 19s.xml">
+      <configuration name="testMainMenu.testreturnunsuccessful" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testReturnBook - 2016.02.25 at 17h 06m 19s.xml">
-      <configuration name="UserTest.testReturnBook" configurationId="JUnit" />
+    <history-entry file="testMainMenu_testreturnunsuccessful - 2016.02.25 at 18h 13m 34s.xml">
+      <configuration name="testMainMenu.testreturnunsuccessful" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-41" y="127" width="1475" height="805" extended-state="0" />
+    <frame x="-13" y="128" width="1475" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -569,7 +569,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.2623926" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3722826" sideWeight="0.4976867" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27173913" sideWeight="0.4976867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15254237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -743,36 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.83179724">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1022#1023#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -788,13 +758,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6612903">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.79330707">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
             <element signature="e#122#130#0" expanded="true" />
             <element signature="e#627#635#0" expanded="true" />
             <element signature="e#1354#1355#0" expanded="true" />
             <element signature="e#1389#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testMainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8307087">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -35,7 +35,7 @@ public class UserTest {
 
     @Test
     public void testCheckOutBook() {
-        String message = "You have successfully checked out THE SOCIAL ANIMAL by David Brooks, 2011. Thank you! Enjoy the book.";
+        String message = "You have successfully checked out THE SOCIAL ANIMAL by David Brooks, 2011. Thank you! Enjoy the book.\n";
         user.checkOutBook(menu, "The social animal");
         assertEquals(false, menu.bookList.containsKey("THE SOCIAL ANIMAL"));
         assertEquals(message, outContent.toString());
@@ -55,6 +55,12 @@ public class UserTest {
         assertEquals(true, menu.bookList.containsKey("THE SOCIAL ANIMAL"));
     }
 
+    @Test
+    public void testUnsuccessfulReturnBook() {
+        user.returnBook(menu, "The Unknown book");
+        String message = "That is not a valid book to return.\n";
+        assertEquals(message, outContent.toString());
+    }
 
 
 }

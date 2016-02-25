@@ -59,7 +59,7 @@ public class MainMenu {
                 bookToRemove = title;
                 bookToRemoveAuthorYear = bookList.get(bookToRemove);
                 registerBookToBeCheckedOut();
-                System.out.print("You have successfully checked out " + bookToRemove + " by " + bookToRemoveAuthorYear + ". Thank you! Enjoy the book.");
+                System.out.println("You have successfully checked out " + bookToRemove + " by " + bookToRemoveAuthorYear + ". Thank you! Enjoy the book.");
             }
         }
         if (bookToRemove != null) {
@@ -76,12 +76,16 @@ public class MainMenu {
 
     public void returnBook(String book) {
         String bookToReturn = book.toUpperCase();
+        if (!checkedOutItems.contains(bookToReturn)) {
+            System.out.println("That is not a valid book to return.");
+        }
         for (String item : checkedOutItems) {
             if (item.contains(bookToReturn)) {
                 String[] parts = item.split(", ");
                 String title = parts[0];
                 String authorYear = parts[1] + ", " + parts[2];
                 bookList.put(title, authorYear);
+                System.out.println("Thank you for returning the book.");
             }
         }
     }
