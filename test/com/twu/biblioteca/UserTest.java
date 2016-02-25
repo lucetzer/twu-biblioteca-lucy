@@ -3,13 +3,11 @@ package com.twu.biblioteca;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+import org.mockito.Mockito;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
+
 
 public class UserTest {
 
@@ -37,13 +35,9 @@ public class UserTest {
 
     @Test
     public void testCheckOutBook() {
-        String newList = "Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR\n" +
-            "LIFE OF PI                 Yann Martel      2001\n" +
-            "THE CATCHER IN THE RYE     J.D. Salinger    1951\n" +
-            "THE PROPHET                Kahlil Gibran    1923\n" +
-            "TO KILL A MOCKINGBIRD      Harper Lee       1960\n";
+        String newList = "You have successfully checked out THE SOCIAL ANIMAL.";
         user.checkOutBook(menu, "The social animal");
-        menu.printBookList();
+        assertEquals(false, menu.bookList.containsKey("THE SOCIAL ANIMAL"));
         assertEquals(newList, outContent.toString());
     }
 

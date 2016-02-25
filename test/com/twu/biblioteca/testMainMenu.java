@@ -68,4 +68,11 @@ public class testMainMenu {
         assertEquals("MAIN MENU\n1. List Books\n2. Quit\n", outContent.toString());
     }
 
+//    @Test
+//    public void testSuccessfulCheckoutMessage() {
+//        assertEquals("You have successfully ")
+//    }
+
+
+
 }
