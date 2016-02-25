@@ -55,7 +55,7 @@ public class MainMenu {
             String title = entry.getKey();
             if (title.equals(selectedBook)) {
                 bookToRemove = title;
-                System.out.print("You have successfully checked out " + bookToRemove + ".");
+                System.out.print("You have successfully checked out " + bookToRemove + ". Thank you! Enjoy the book.");
             }
         }
         bookList.remove(bookToRemove);

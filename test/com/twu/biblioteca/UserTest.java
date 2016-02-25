@@ -35,7 +35,7 @@ public class UserTest {
 
     @Test
     public void testCheckOutBook() {
-        String newList = "You have successfully checked out THE SOCIAL ANIMAL.";
+        String newList = "You have successfully checked out THE SOCIAL ANIMAL. Thank you! Enjoy the book.";
         user.checkOutBook(menu, "The social animal");
         assertEquals(false, menu.bookList.containsKey("THE SOCIAL ANIMAL"));
         assertEquals(newList, outContent.toString());
