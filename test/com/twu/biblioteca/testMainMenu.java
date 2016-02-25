@@ -12,11 +12,12 @@ public class testMainMenu {
     String menuOptions = "MAIN MENU\n1. List Books\n";
     MainMenu menu = new MainMenu();
     String bookList = "Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR\n" +
-        "1. The Prophet             Kahlil Gibran    1923\n" +
-        "2. To Kill a Mockingbird   Harper Lee       1960\n" +
-        "3. The Catcher in the Rye  J.D. Salinger    1951\n" +
-        "4. The Social Animal       David Brooks     2011\n" +
-        "5. Life of Pi              Yann Martel      2001\n";
+        "LIFE OF PI                 Yann Martel      2001\n" +
+        "THE CATCHER IN THE RYE     J.D. Salinger    1951\n" +
+        "THE PROPHET                Kahlil Gibran    1923\n" +
+        "THE SOCIAL ANIMAL          David Brooks     2011\n" +
+        "TO KILL A MOCKINGBIRD      Harper Lee       1960\n";
+
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 

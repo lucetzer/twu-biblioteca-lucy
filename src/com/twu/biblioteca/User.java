@@ -14,8 +14,9 @@ public class User {
         return message;
     }
 
-    public String checkOutBook(MainMenu menu) {
-        return null;
+    public void checkOutBook(MainMenu menu, String bookNumber) {
+        menu.removeBookFromList(bookNumber);
+//        menu.printBookList();
     }
 
 }

@@ -7,12 +7,14 @@ public class MainMenu {
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
 
     Map<String, String> bookList = new TreeMap<String, String>() {{
-        put("1. The Prophet", "Kahlil Gibran, 1923");
-        put("2. To Kill a Mockingbird", "Harper Lee, 1960");
-        put("3. The Catcher in the Rye", "J.D. Salinger, 1951");
-        put("4. The Social Animal", "David Brooks, 2011");
-        put("5. Life of Pi", "Yann Martel, 2001");
+        put("THE PROPHET", "Kahlil Gibran, 1923");
+        put("TO KILL A MOCKINGBIRD", "Harper Lee, 1960");
+        put("THE CATCHER IN THE RYE", "J.D. Salinger, 1951");
+        put("THE SOCIAL ANIMAL", "David Brooks, 2011");
+        put("LIFE OF PI", "Yann Martel, 2001");
     }};
+    String bookToRemove;
+
 
     public void printBookList() {
         System.out.println("Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR");
@@ -40,11 +42,22 @@ public class MainMenu {
     public void selectFromMenu(int option) {
         if (option == 1) {
             printBookList();
-        } else if(option == 2) {
+        } else if (option == 2) {
             System.out.print("Goodbye!");
         } else {
             System.out.print("Select a valid option!");
         }
+    }
+
+    public void removeBookFromList(String book) {
+        String selectedBook = book.toUpperCase();
+        for (Map.Entry<String, String> entry : bookList.entrySet()) {
+            String title = entry.getKey();
+            if (title.equals(selectedBook)) {
+                bookToRemove = title;
+            }
+        }
+        bookList.remove(bookToRemove);
     }
 
 }
