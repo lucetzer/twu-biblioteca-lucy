@@ -18,7 +18,6 @@ public class testMainMenu {
         "THE SOCIAL ANIMAL          David Brooks     2011\n" +
         "TO KILL A MOCKINGBIRD      Harper Lee       1960\n";
 
-
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
@@ -67,12 +66,6 @@ public class testMainMenu {
         menu.printMenu();
         assertEquals("MAIN MENU\n1. List Books\n2. Quit\n", outContent.toString());
     }
-
-//    @Test
-//    public void testSuccessfulCheckoutMessage() {
-//        assertEquals("You have successfully ")
-//    }
-
 
 
 }

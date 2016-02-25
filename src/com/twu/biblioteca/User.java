@@ -13,7 +13,9 @@ public class User {
         menu.removeBookFromList(book);
     }
 
-
+    public void returnBook(MainMenu menu, String book) {
+        menu.returnBook(book);
+    }
 
 
 }

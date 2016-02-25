@@ -13,8 +13,10 @@ public class MainMenu {
         put("THE SOCIAL ANIMAL", "David Brooks, 2011");
         put("LIFE OF PI", "Yann Martel, 2001");
     }};
-    String bookToRemove;
 
+    String bookToRemove;
+    String bookToRemoveAuthorYear;
+    ArrayList<String> checkedOutItems = new ArrayList<String>();
 
     public void printBookList() {
         System.out.println("Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR");
@@ -55,7 +57,9 @@ public class MainMenu {
             String title = entry.getKey();
             if (title.equals(selectedBook)) {
                 bookToRemove = title;
-                System.out.print("You have successfully checked out " + bookToRemove + ". Thank you! Enjoy the book.");
+                bookToRemoveAuthorYear = bookList.get(bookToRemove);
+                registerBookToBeCheckedOut();
+                System.out.print("You have successfully checked out " + bookToRemove + " by " + bookToRemoveAuthorYear + ". Thank you! Enjoy the book.");
             }
         }
         if (bookToRemove != null) {
@@ -64,5 +68,23 @@ public class MainMenu {
             System.out.print("That book is unavailable. Please select a book from the list.");
         }
     }
+
+    public void registerBookToBeCheckedOut() {
+        String book = bookToRemove + ", " + bookToRemoveAuthorYear;
+        checkedOutItems.add(book);
+    }
+
+    public void returnBook(String book) {
+        String bookToReturn = book.toUpperCase();
+        for (String item : checkedOutItems) {
+            if (item.contains(bookToReturn)) {
+                String[] parts = item.split(", ");
+                String title = parts[0];
+                String authorYear = parts[1] + ", " + parts[2];
+                bookList.put(title, authorYear);
+            }
+        }
+    }
+
 
 }
