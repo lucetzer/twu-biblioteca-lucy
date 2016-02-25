@@ -27,7 +27,7 @@
     <favorites_list name="biblioteca" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4808">
+    <splitter split-orientation="horizontal" split-proportion="0.3744">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
@@ -46,8 +46,8 @@
           <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.86175114">
-                  <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.5852535">
+                  <caret line="45" column="49" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#620#621#0" expanded="true" />
@@ -98,7 +98,7 @@
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.79262674">
-                  <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+                  <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
                   <folding>
                     <element signature="e#122#130#0" expanded="true" />
                     <element signature="e#1254#1255#0" expanded="true" />
@@ -278,7 +278,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest.testUnsuccessfulCheckout">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration default="false" name="testMainMenu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -509,10 +509,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBook" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBookError" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testUnsuccessfulCheckout" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBook" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.testCheckOutBookError" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.testMainMenu" />
       </list>
     </recent_temporary>
@@ -525,17 +525,8 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TestHistory">
-    <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 11h 45m 06s.xml">
-      <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 11h 58m 02s.xml">
-      <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 12h 13m 50s.xml">
-      <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 12h 14m 02s.xml">
-      <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
+    <history-entry file="UserTest - 2016.02.25 at 16h 06m 10s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 12h 14m 20s.xml">
       <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
@@ -549,10 +540,19 @@
     <history-entry file="UserTest_testCheckOutBook - 2016.02.25 at 12h 15m 59s.xml">
       <configuration name="UserTest.testCheckOutBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testCheckOutBookError - 2016.02.25 at 11h 44m 40s.xml">
-      <configuration name="UserTest.testCheckOutBookError" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 16h 01m 15s.xml">
+      <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 16h 02m 20s.xml">
+      <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 16h 04m 03s.xml">
+      <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 16h 05m 09s.xml">
+      <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest_testUnsuccessfulCheckout - 2016.02.25 at 16h 06m 03s.xml">
       <configuration name="UserTest.testUnsuccessfulCheckout" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -566,7 +566,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.2623926" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3722826" sideWeight="0.4976867" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3722826" sideWeight="0.4976867" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15254237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -763,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86175114">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.5852535">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#620#621#0" expanded="true" />
@@ -780,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79262674">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="e#122#130#0" expanded="true" />
             <element signature="e#1254#1255#0" expanded="true" />

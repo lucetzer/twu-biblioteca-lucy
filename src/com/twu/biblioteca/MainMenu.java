@@ -58,7 +58,11 @@ public class MainMenu {
                 System.out.print("You have successfully checked out " + bookToRemove + ". Thank you! Enjoy the book.");
             }
         }
-        bookList.remove(bookToRemove);
+        if (bookToRemove != null) {
+            bookList.remove(bookToRemove);
+        } else {
+            System.out.print("That book is unavailable. Please select a book from the list.");
+        }
     }
 
 }
