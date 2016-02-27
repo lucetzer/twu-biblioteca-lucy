@@ -16,7 +16,7 @@ public class MainMenu {
 
     String bookToRemove;
     String bookToRemoveAuthorYear;
-    ArrayList<String> checkedOutItems = new ArrayList<String>();
+    Map<String, String> checkedOutItems = new TreeMap<String, String>();
 
     public void printBookList() {
         System.out.println("Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR");
@@ -29,7 +29,7 @@ public class MainMenu {
     }
 
     public void printMenu() {
-        System.out.println("MAIN MENU");
+        System.out.println("\nMAIN MENU");
         int index = 0;
         for (String item : menuItems) {
             index += 1;
@@ -39,16 +39,6 @@ public class MainMenu {
 
     public void addMenuItem(String item) {
         menuItems.add(item);
-    }
-
-    public void selectFromMenu(int option) {
-        if (option == 1) {
-            printBookList();
-        } else if (option == 2) {
-            System.out.print("Goodbye!");
-        } else {
-            System.out.print("Select a valid option!");
-        }
     }
 
     public void removeBookFromList(String book) {
@@ -70,25 +60,23 @@ public class MainMenu {
     }
 
     public void registerBookToBeCheckedOut() {
-        String book = bookToRemove + ", " + bookToRemoveAuthorYear;
-        checkedOutItems.add(book);
+        checkedOutItems.put(bookToRemove, bookToRemoveAuthorYear);
     }
 
     public void returnBook(String book) {
         String bookToReturn = book.toUpperCase();
-        if (!checkedOutItems.contains(bookToReturn)) {
+        if (!checkedOutItems.containsKey(bookToReturn)) {
             System.out.println("That is not a valid book to return.");
         }
-        for (String item : checkedOutItems) {
-            if (item.contains(bookToReturn)) {
-                String[] parts = item.split(", ");
-                String title = parts[0];
-                String authorYear = parts[1] + ", " + parts[2];
-                bookList.put(title, authorYear);
+        for (Map.Entry<String, String> entry : checkedOutItems.entrySet()) {
+            String title = entry.getKey();
+            if (title.equals(bookToReturn)) {
+                bookList.put(title, entry.getValue());
                 System.out.println("Thank you for returning the book.");
             }
         }
     }
+
 
 
 }

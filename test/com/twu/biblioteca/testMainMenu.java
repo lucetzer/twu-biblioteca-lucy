@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 
 public class testMainMenu {
-    String menuOptions = "MAIN MENU\n1. List Books\n";
+    String menuOptions = "\nMAIN MENU\n1. List Books\n";
     MainMenu menu = new MainMenu();
     String bookList = "Here is our book list:\n\n" + "TITLE                      AUTHOR           YEAR\n" +
         "LIFE OF PI                 Yann Martel      2001\n" +
@@ -37,34 +37,17 @@ public class testMainMenu {
     }
 
     @Test
-    public void testSelectFromMenu() {
-        menu.selectFromMenu(1);
-        assertEquals(bookList, outContent.toString());
-    }
-
-    @Test
     public void testPrintBookList() {
         menu.printBookList();
         assertEquals(bookList, outContent.toString());
     }
 
     @Test
-    public void testInvalidOption() {
-        menu.selectFromMenu(8);
-        assertEquals("Select a valid option!", outContent.toString());
-    }
-
-    @Test
-    public void testQuitOption() {
-        menu.selectFromMenu(2);
-        assertEquals("Goodbye!", outContent.toString());
-    }
-
-    @Test
     public void testAddMenuItem() {
         menu.addMenuItem("Quit");
         menu.printMenu();
-        assertEquals("MAIN MENU\n1. List Books\n2. Quit\n", outContent.toString());
+        assertEquals("\nMAIN MENU\n1. List Books\n2. Quit\n", outContent.toString());
     }
+
 
 }
