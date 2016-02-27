@@ -32,18 +32,13 @@ public class BibliotecaApp {
         Scanner scanner = new Scanner(System.in);
         String titleFromUser = scanner.nextLine();
         user.checkOutBook(menu, titleFromUser);
-        System.out.println(menu.bookList);
-
     }
 
     public void getReturnBookFromUser(User user, MainMenu menu) {
         System.out.println("Please enter the title of the book you wish to return:");
         Scanner scanner = new Scanner(System.in);
         String titleFromUser = scanner.nextLine();
-        System.out.println(menu.bookList);
         user.returnBook(menu, titleFromUser);
-        System.out.println(menu.bookList);
-
     }
 
     public static void main(String[] args) {
