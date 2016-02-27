@@ -3,7 +3,6 @@ package com.twu.biblioteca;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
@@ -11,9 +10,8 @@ import static org.junit.Assert.assertEquals;
 
 public class UserTest {
 
-    String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
+    String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n";
     User user = new User();
-//    MainMenu menu = Mockito.mock(MainMenu.class);
     MainMenu menu = new MainMenu();
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

@@ -1,8 +1,25 @@
 package com.twu.biblioteca;
 
+import java.io.*;
+import java.util.Scanner;
+
+
 public class BibliotecaApp {
 
-    public static void main(String[] args) {
-        System.out.println("Hello, world!");
+
+    public String assessUserInput(String input) {
+
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        User luce = new User();
+        luce.printMessage();
+        MainMenu libraryMenu = new MainMenu();
+        libraryMenu.addMenuItem("Quit");
+        libraryMenu.printMenu();
+
+
+
     }
 }
