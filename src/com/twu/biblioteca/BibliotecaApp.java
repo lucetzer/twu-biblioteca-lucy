@@ -5,26 +5,39 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
+    private static final int BOOKLIST = 1;
+    private static final int CHECKOUT = 2;
+    private static final int RETURN = 3;
+    private static final int QUIT = 4;
+
 
     public void selectFromMenu(MainMenu menu, int option, User user) {
-        if (option == 1) {
-            menu.printBookList();
-            menu.printMenu();
-            System.out.println("Please make a selection by entering the number:");
-        } else if (option == 2) {
-            getCheckOutBookFromUser(user, menu);
-            menu.printMenu();
-            System.out.println("Please make a selection by entering the number:");
-        } else if (option == 3) {
-            getReturnBookFromUser(user, menu);
-            menu.printMenu();
-            System.out.println("Please make a selection by entering the number:");
-        } else if (option == 4) {
-            System.out.print("Goodbye!");
-        } else {
-            System.out.print("Select a valid option!");
+        switch(option) {
+            case BOOKLIST:
+                menu.printBookList();
+                prompt(menu);
+                break;
+            case CHECKOUT:
+                getCheckOutBookFromUser(user, menu);
+                prompt(menu);
+                break;
+            case RETURN:
+                getReturnBookFromUser(user, menu);
+                prompt(menu);
+                break;
+            case QUIT:
+                System.out.print("Goodbye!");
+                break;
+            default:
+                System.out.print("Select a valid option!");
+                break;
         }
 
+    }
+
+    public void prompt(MainMenu menu) {
+        menu.printMenu();
+        System.out.println("Please make a selection by entering the number:");
     }
 
     public void getCheckOutBookFromUser(User user, MainMenu menu) {
@@ -59,10 +72,6 @@ public class BibliotecaApp {
             String line = scanner.next();
             int option = Integer.parseInt(line);
             biblioteca.selectFromMenu(libraryMenu, option, user);
-            if (option > libraryMenu.menuItems.size()) {
-                scanner.nextLine();
-            }
-            scanner.nextLine();
         }
     }
 

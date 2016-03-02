@@ -40,4 +40,9 @@ public class testBibliotecaApp {
         assertEquals("Goodbye!", outContent.toString());
     }
 
+//    @Test
+//    public void testScannerInput() {
+//        String message =
+//    }
+
 }
