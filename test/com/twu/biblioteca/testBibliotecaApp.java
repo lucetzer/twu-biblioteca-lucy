@@ -16,7 +16,7 @@ public class testBibliotecaApp {
 //    User user = new User();
 //    MainMenu menu = new MainMenu();
 
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
 //    @Test
 //    public void shouldDisplayWelcomeMessage() throws Exception {

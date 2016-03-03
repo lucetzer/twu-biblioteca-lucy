@@ -2,15 +2,19 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 import org.mockito.Mockito;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 
 public class testLibrary {
 
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private Book book1 = Mockito.mock(Book.class);
     private Book book2 = Mockito.mock(Book.class);
     private Movie movie1 = Mockito.mock(Movie.class);
     private Movie movie2 = Mockito.mock(Movie.class);
-    Library library = new Library();
+    Library library = new Library(new PrintStream(outContent));
+
 
     @Test
     public void canAddBookToLibraryBookList() {
@@ -29,5 +33,40 @@ public class testLibrary {
         assertEquals(movie2, library.movieList.get(1));
         assertEquals(2, library.movieList.size());
     }
+
+    Book book3 = Mockito.spy(new Book("LIFE OF PI", "Yann Martel", "2001"));
+    Book book4 = Mockito.spy(new Book("THE CATCHER IN THE RYE", "J.D. Salinger", "1951"));
+    Book book5 = Mockito.spy(new Book("TO KILL A MOCKINGBIRD", "Harper Lee", "1960"));
+    String expectedBookList =
+            "1. LIFE OF PI                 Yann Martel      2001\n" +
+            "2. THE CATCHER IN THE RYE     J.D. Salinger    1951\n" +
+            "3. TO KILL A MOCKINGBIRD      Harper Lee       1960";
+
+
+    @Test
+    public void canPrintLibraryBookList() {
+        library.bookList.add(book3);
+        library.bookList.add(book4);
+        library.bookList.add(book5);
+        library.printBookList();
+        String actual = outContent.toString().trim();
+        assertEquals(expectedBookList, actual);
+    }
+
+    Movie movie3 = Mockito.spy(new Movie("THE LIVES OF OTHERS", "2006", "Florian Henckel von Donnersmarck", "8"));
+    Movie movie4 = Mockito.spy(new Movie("28 DAYS LATER", "2002", "Danny Boyle", "7"));
+    String expectedMovieList =
+            "1. THE LIVES OF OTHERS        2006   Florian Henckel von Donnersmarck  8\n" +
+            "2. 28 DAYS LATER              2002   Danny Boyle                7";
+
+    @Test
+    public void canPrintLibraryMovieList() {
+        library.movieList.add(movie3);
+        library.movieList.add(movie4);
+        library.printMovieList();
+        String actual = outContent.toString().trim();
+        assertEquals(expectedMovieList, actual);
+    }
+
 
 }
