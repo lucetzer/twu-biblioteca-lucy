@@ -26,10 +26,10 @@ public class UserTest {
         System.setOut(null);
     }
 
-    @Test
-    public void testPrintMessage() {
-        assertEquals(message, user.printMessage());
-    }
+//    @Test
+//    public void testPrintMessage() {
+//        assertEquals(message, user.printMessage());
+//    }
 
     @Test
     public void testCheckOutBook() {
