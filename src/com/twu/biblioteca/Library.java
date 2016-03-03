@@ -2,15 +2,27 @@ package com.twu.biblioteca;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Library {
 
     private final PrintStream out;
+    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
     ArrayList<Book> bookList = new ArrayList<Book>();
     ArrayList<Movie> movieList = new ArrayList<Movie>();
+    private ArrayList<User> userList = new ArrayList<User>();
 
     public Library(PrintStream out) {
         this.out = out;
+    }
+
+    public void printMenu() {
+        out.println("MAIN MENU");
+        int index = 0;
+        for (String item : menuItems) {
+            index += 1;
+            out.println(index + ". " + item);
+        }
     }
 
     public void printBookList() {
@@ -29,5 +41,12 @@ public class Library {
         }
     }
 
+    public void addToUserList(User user) {
+        userList.add(user);
+    }
+
+    public ArrayList getUserList() {
+        return userList;
+    }
 
 }

@@ -2,23 +2,8 @@ package com.twu.biblioteca;
 
 public class User {
 
-//    String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n";
-//
-//
-//    public String printMessage() {
-//        System.out.println(message);
-//        return message;
-//    }
-
-//    public void checkOutBook(MainMenu menu, String book) {
-//        menu.removeBookFromList(book);
-//    }
-//
-//    public void returnBook(MainMenu menu, String book) {
-//        menu.returnBook(book);
-//    }
-
-    String name, email, phoneNumber, libraryNumber, password;
+    private String name, email, phoneNumber, libraryNumber, password;
+    private boolean status;
 
     public User(String name, String email, String number, String libraryNumber, String password) {
         this.name = name;
@@ -32,5 +17,21 @@ public class User {
         return String.format("%-15s  %-25s  %s%n", name, email, phoneNumber);
     }
 
+    public String getLibraryNumber() {
+        return libraryNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public boolean changeStatus() {
+        status = true;
+        return true;
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
 
 }

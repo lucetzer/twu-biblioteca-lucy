@@ -1,43 +1,28 @@
-//package com.twu.biblioteca;
-//
-//import java.util.ArrayList;
-//import java.util.Arrays;
-//import java.util.Scanner;
-//import java.io.PrintStream;
-//
-//
-//public class BibliotecaApp {
-//
-//
-//    private final PrintStream out;
-//    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
-//
-//    public void printMenu() {
-//        out.println("MAIN MENU");
-//        int index = 0;
-//        for (String item : menuItems) {
-//            index += 1;
-//            System.out.println(index + ". " + item);
-//        }
-//    }
-//
-//    public void addMenuItem(String item) {
-//        menuItems.add(item);
-//    }
-//
-//
-//    public BibliotecaApp(PrintStream out) {
-//        this.out = out;
-//    }
-//
+package com.twu.biblioteca;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.io.PrintStream;
+
+
+public class BibliotecaApp {
+
+
+    private final PrintStream out;
+
+    public BibliotecaApp(PrintStream out) {
+        this.out = out;
+    }
+
 //    private static final int BOOKLIST = 1;
 //    private static final int CHECKOUT = 2;
 //    private static final int RETURN = 3;
 //    private static final int QUIT = 4;
 //
-//    public void printWelcomeMsg() {
-//        out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!");
-//    }
+    public void printWelcomeMsg() {
+        out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!");
+    }
 //
 //    public void printGoodByeMsg() {
 //        out.println("Thank you for using Biblioteca. Goodbye");
@@ -162,5 +147,5 @@
 //            ActionUserOption.getOption(option, bookMenu).go();
 //        }
 //    }
-//
-//}
+
+}

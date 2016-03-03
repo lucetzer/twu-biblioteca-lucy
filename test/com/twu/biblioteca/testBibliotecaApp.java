@@ -16,15 +16,15 @@ public class testBibliotecaApp {
 //    User user = new User();
 //    MainMenu menu = new MainMenu();
 
-//    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-//    @Test
-//    public void shouldDisplayWelcomeMessage() throws Exception {
-//        new BibliotecaApp(new PrintStream(outContent)).printWelcomeMsg();
-//        String actual = outContent.toString().trim();
-//        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
-//        assertEquals(message, actual);
-//    }
+    @Test
+    public void shouldDisplayWelcomeMessage() throws Exception {
+        new BibliotecaApp(new PrintStream(outContent)).printWelcomeMsg();
+        String actual = outContent.toString().trim();
+        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
+        assertEquals(message, actual);
+    }
 
 //    @Before
 //    public void setUpStreams() {

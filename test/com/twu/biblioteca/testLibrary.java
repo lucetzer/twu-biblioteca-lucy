@@ -17,6 +17,14 @@ public class testLibrary {
 
 
     @Test
+    public void testAddMenuItem() {
+        library.menuItems.add("Quit");
+        library.printMenu();
+        String actual = outContent.toString().trim();
+        assertEquals("MAIN MENU\n1. List Books\n2. Quit", actual);
+    }
+
+    @Test
     public void canAddBookToLibraryBookList() {
         library.bookList.add(book1);
         library.bookList.add(book2);
@@ -68,5 +76,12 @@ public class testLibrary {
         assertEquals(expectedMovieList, actual);
     }
 
+    private User user1 = Mockito.mock(User.class);
+
+    @Test
+    public void canAddAndGetUserList() {
+        library.addToUserList(user1);
+        assertEquals(user1, library.getUserList().get(0));
+    }
 
 }
