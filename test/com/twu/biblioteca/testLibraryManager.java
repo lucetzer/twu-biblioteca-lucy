@@ -45,13 +45,16 @@ public class testLibraryManager {
 
     @Test
     public void itemsCanBeReturned() {
-       libraryMgr.checkOutItem(bookList, book1, user);
-        assertEquals(book1, libraryMgr.returnBook(book1));
+        libraryMgr.checkOutItem(bookList, book1, user);
+        libraryMgr.checkOutItem(movieList, movie1, user);
+        assertEquals(book1, libraryMgr.returnItem(book1));
+        assertEquals(movie1, libraryMgr.returnItem(movie1));
     }
 
     @Test
     public void invalidItemToReturn() {
-        assertEquals("That is not a valid item to return", libraryMgr.returnBook(book2));
+        assertEquals("That is not a valid item to return", libraryMgr.returnItem(book2));
+        assertEquals("That is not a valid item to return", libraryMgr.returnItem(movie2));
     }
 
 }

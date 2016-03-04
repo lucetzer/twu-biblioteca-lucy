@@ -49,4 +49,24 @@ public class Library {
         return userList;
     }
 
+    public boolean removeBookFromList(Book book) {
+        for (Book item : bookList) {
+            if (item.equals(book)) {
+                bookList.remove(item);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removeMovieFromList(Movie movie) {
+        for (Movie item : movieList) {
+            if (item.equals(movie)) {
+                movieList.remove(item);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

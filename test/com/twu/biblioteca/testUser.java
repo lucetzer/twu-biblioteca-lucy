@@ -43,5 +43,4 @@ public class testUser {
         assertEquals(book, user.getBorrowedItems().get(0));
     }
 
-
 }

@@ -50,6 +50,19 @@ public class testLibrary {
             "2. THE CATCHER IN THE RYE     J.D. Salinger    1951\n" +
             "3. TO KILL A MOCKINGBIRD      Harper Lee       1960";
 
+    @Test
+    public void canRemoveBorrowedBooksFromList() {
+        library.bookList.add(book1);
+        library.removeBookFromList(book1);
+        assertEquals(false, library.bookList.contains(book1));
+    }
+
+    @Test
+    public void canRemoveBorrowedMovieFromList() {
+        library.movieList.add(movie1);
+        library.removeMovieFromList(movie1);
+        assertEquals(false, library.movieList.contains(movie1));
+    }
 
     @Test
     public void canPrintLibraryBookList() {

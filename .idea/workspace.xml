@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce1f33f-2c07-42fc-968f-1736abc63015" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/ActionUserOption.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/LibraryManager.class" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/LibraryManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/testLibraryManager.class" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/testLibraryManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java" />
     </list>
@@ -52,11 +49,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testUser.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="testUser.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.2984054">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#536#537#0" expanded="true" />
@@ -74,7 +71,7 @@
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#765#771#0" expanded="true" />
@@ -84,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="testLibrary.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="testLibrary.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="42" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                <state vertical-scroll-proportion="2.2551253">
+                  <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -114,14 +111,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LibraryManager.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="LibraryManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.35079727">
-                  <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#382#390#0" expanded="true" />
+                    <element signature="e#334#342#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -165,11 +162,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.35079727">
+                  <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#217#225#0" expanded="true" />
@@ -229,15 +226,15 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryLogin.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/LoginManager.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLoginManager.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/UserManager.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testUserManager.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryManager.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
       </list>
     </option>
   </component>
@@ -254,7 +251,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-25" />
+    <option name="x" value="-191" />
     <option name="y" value="23" />
     <option name="width" value="1523" />
     <option name="height" value="716" />
@@ -375,33 +372,7 @@
       <recent name="$PROJECT_DIR$/test/com/twu/biblioteca" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testUser">
-    <configuration default="false" name="testLibraryManager.libraryCanKeepTrackOfCheckedOutItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testLibraryManager" />
-      <option name="METHOD_NAME" value="libraryCanKeepTrackOfCheckedOutItems" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.testLibrary.canRemoveBorrowedMovieFromList">
     <configuration default="false" name="testLibraryManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -428,58 +399,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="testLibraryManager.itemsCanBeReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testLibraryManager" />
-      <option name="METHOD_NAME" value="itemsCanBeReturned" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="testUser.canKeepTrackOfItemsBorrowedByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="biblioteca" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testUser" />
-      <option name="METHOD_NAME" value="canKeepTrackOfItemsBorrowedByUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -494,6 +413,84 @@
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testUser" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="testLibraryManager.invalidItemToReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testLibraryManager" />
+      <option name="METHOD_NAME" value="invalidItemToReturn" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="testLibrary.canRemoveBorrwedBooksFromList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testLibrary" />
+      <option name="METHOD_NAME" value="canRemoveBorrwedBooksFromList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="testLibrary.canRemoveBorrowedMovieFromList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="biblioteca" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.testLibrary" />
+      <option name="METHOD_NAME" value="canRemoveBorrowedMovieFromList" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -927,19 +924,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.testLibraryManager.libraryCanKeepTrackOfCheckedOutItems" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.testLibraryManager" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.testLibraryManager.itemsCanBeReturned" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.testUser.canKeepTrackOfItemsBorrowedByUser" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.testUser" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.testLibraryManager" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.testUser" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.testLibraryManager.invalidItemToReturn" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.testLibrary.canRemoveBorrwedBooksFromList" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.testLibrary.canRemoveBorrowedMovieFromList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.testUser" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.testLibraryManager" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.testUser.canKeepTrackOfItemsBorrowedByUser" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.testLibraryManager.itemsCanBeReturned" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.testLibraryManager.libraryCanKeepTrackOfCheckedOutItems" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.testLibrary.canRemoveBorrowedMovieFromList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.testLibrary.canRemoveBorrwedBooksFromList" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.testLibraryManager.invalidItemToReturn" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.testLibraryManager" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.testUser" />
       </list>
     </recent_temporary>
   </component>
@@ -954,31 +951,31 @@
       <option name="number" value="Default" />
       <updated>1456918635226</updated>
       <workItem from="1456918639941" duration="114000" />
-      <workItem from="1456918782648" duration="66568000" />
+      <workItem from="1456918782648" duration="68334000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testLibraryManager - 2016.03.04 at 10h 25m 13s.xml">
-      <configuration name="testLibraryManager" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="testLibraryManager - 2016.03.04 at 10h 47m 35s.xml">
-      <configuration name="testLibraryManager" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testLibraryManager - 2016.03.04 at 14h 11m 05s.xml">
       <configuration name="testLibraryManager" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testLibraryManager_itemsCanBeReturned - 2016.03.03 at 23h 13m 28s.xml">
-      <configuration name="testLibraryManager.itemsCanBeReturned" configurationId="JUnit" />
+    <history-entry file="testLibraryManager - 2016.03.04 at 14h 46m 36s.xml">
+      <configuration name="testLibraryManager" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testLibraryManager_itemsCanBeReturned - 2016.03.03 at 23h 17m 33s.xml">
-      <configuration name="testLibraryManager.itemsCanBeReturned" configurationId="JUnit" />
+    <history-entry file="testLibraryManager_invalidItemToReturn - 2016.03.04 at 14h 46m 47s.xml">
+      <configuration name="testLibraryManager.invalidItemToReturn" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testLibraryManager_itemsCanBeReturned - 2016.03.03 at 23h 18m 58s.xml">
-      <configuration name="testLibraryManager.itemsCanBeReturned" configurationId="JUnit" />
+    <history-entry file="testLibrary_canRemoveBorrowedMovieFromList - 2016.03.04 at 14h 58m 49s.xml">
+      <configuration name="testLibrary.canRemoveBorrowedMovieFromList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testLibraryManager_itemsCanBeReturned - 2016.03.04 at 10h 47m 24s.xml">
-      <configuration name="testLibraryManager.itemsCanBeReturned" configurationId="JUnit" />
+    <history-entry file="testLibrary_canRemoveBorrowedMovieFromList - 2016.03.04 at 14h 59m 20s.xml">
+      <configuration name="testLibrary.canRemoveBorrowedMovieFromList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testLibrary_canRemoveBorrwedBooksFromList - 2016.03.04 at 14h 55m 07s.xml">
+      <configuration name="testLibrary.canRemoveBorrwedBooksFromList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testLibrary_canRemoveBorrwedBooksFromList - 2016.03.04 at 14h 55m 27s.xml">
+      <configuration name="testLibrary.canRemoveBorrwedBooksFromList" configurationId="JUnit" />
     </history-entry>
     <history-entry file="testUser - 2016.03.04 at 14h 22m 44s.xml">
       <configuration name="testUser" configurationId="JUnit" />
@@ -991,10 +988,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66682000" />
+    <option name="totallyTimeSpent" value="68448000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-25" y="23" width="1523" height="716" extended-state="0" />
+    <frame x="-191" y="23" width="1523" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1076,7 +1073,7 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1410,16 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/util/TreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3318182">
@@ -1428,23 +1415,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#217#225#0" expanded="true" />
-            <element signature="e#300#306#0" expanded="true" />
-            <element signature="e#356#363#0" expanded="true" />
-            <element signature="e#419#425#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.23917995">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,6 +1442,17 @@
           <folding>
             <element signature="e#174#175#0" expanded="true" />
             <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#334#342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1482,22 +1480,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#771#0" expanded="true" />
-            <element signature="e#821#828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2984054">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#536#537#0" expanded="true" />
@@ -1510,33 +1496,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibraryManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#765#771#0" expanded="true" />
+            <element signature="e#821#828#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23917995">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.35079727">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#217#225#0" expanded="true" />
+            <element signature="e#300#306#0" expanded="true" />
+            <element signature="e#356#363#0" expanded="true" />
+            <element signature="e#419#425#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/LibraryManager.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/testLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35079727">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        <state vertical-scroll-proportion="2.2551253">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#390#0" expanded="true" />
           </folding>
         </state>
       </provider>
