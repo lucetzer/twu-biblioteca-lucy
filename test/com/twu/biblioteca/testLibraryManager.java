@@ -20,6 +20,7 @@ public class testLibraryManager {
     Movie movie1 = Mockito.mock(Movie.class);
     Book book2 = Mockito.mock(Book.class);
     Movie movie2 = Mockito.mock(Movie.class);
+    User user = Mockito.mock(User.class);
     ArrayList<Book> bookList = new ArrayList<Book>();
     ArrayList<Movie> movieList = new ArrayList<Movie>();
 
@@ -31,20 +32,20 @@ public class testLibraryManager {
 
     @Test
     public void libraryCanKeepTrackOfCheckedOutItems() {
-        assertEquals(book1, libraryMgr.checkOutItem(bookList, book1));
-        assertEquals(movie1, libraryMgr.checkOutItem(movieList, movie1));
+        assertEquals(book1, libraryMgr.checkOutItem(bookList, book1, user));
+        assertEquals(movie1, libraryMgr.checkOutItem(movieList, movie1, user));
     }
 
     @Test
     public void cannotReturnUnavailableItems() {
-        assertEquals("That item is not available.", libraryMgr.checkOutItem(bookList, book2));
-        assertEquals("That item is not available.", libraryMgr.checkOutItem(movieList, movie2));
+        assertEquals("That item is not available.", libraryMgr.checkOutItem(bookList, book2, user));
+        assertEquals("That item is not available.", libraryMgr.checkOutItem(movieList, movie2, user));
     }
 
 
     @Test
     public void itemsCanBeReturned() {
-       libraryMgr.checkOutItem(bookList, book1);
+       libraryMgr.checkOutItem(bookList, book1, user);
         assertEquals(book1, libraryMgr.returnBook(book1));
     }
 
@@ -52,5 +53,5 @@ public class testLibraryManager {
     public void invalidItemToReturn() {
         assertEquals("That is not a valid item to return", libraryMgr.returnBook(book2));
     }
-    
+
 }

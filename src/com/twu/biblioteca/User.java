@@ -1,9 +1,13 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
     private String name, email, phoneNumber, libraryNumber, password;
     private boolean status;
+    private List<Object> borrowedItems = new ArrayList<Object>();
 
     public User(String name, String email, String number, String libraryNumber, String password) {
         this.name = name;
@@ -32,6 +36,14 @@ public class User {
 
     public boolean getStatus() {
         return status;
+    }
+
+    public void addToBorrowedItems(Object item) {
+        borrowedItems.add(item);
+    }
+
+    public List<Object> getBorrowedItems() {
+        return borrowedItems;
     }
 
 }
