@@ -13,27 +13,27 @@ import static org.junit.Assert.assertEquals;
 
 public class testBibliotecaApp {
 
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    BibliotecaApp bibApp = new BibliotecaApp(new PrintStream(outContent));
-//    Library library = Mockito.mock(Library.class);
-    Library library = new Library(new PrintStream(outContent));
-    User user1 = Mockito.mock(User.class);
-
-    @Test
-    public void shouldDisplayWelcomeMessage() throws Exception {
-        bibApp.printWelcomeMsg();
-        String actual = outContent.toString().trim();
-        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
-        assertEquals(message, actual);
-    }
-
-    @Test
-    public void anyUserCanSeeLibraryItems() {
-        String expected = "test";
-        bibApp.selectFromMainMenu(1);
-        String actual = outContent.toString().trim();
-        assertEquals(expected, actual);
-    }
+//    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+//    BibliotecaApp bibApp = new BibliotecaApp(new PrintStream(outContent));
+////    Library library = Mockito.mock(Library.class);
+//    Library library = new Library(new PrintStream(outContent));
+//    User user1 = Mockito.mock(User.class);
+//
+//    @Test
+//    public void shouldDisplayWelcomeMessage() throws Exception {
+//        bibApp.printWelcomeMsg();
+//        String actual = outContent.toString().trim();
+//        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
+//        assertEquals(message, actual);
+//    }
+//
+//    @Test
+//    public void anyUserCanSeeLibraryItems() {
+//        String expected = "test";
+//        bibApp.selectFromMainMenu(1);
+//        String actual = outContent.toString().trim();
+//        assertEquals(expected, actual);
+//    }
 
 //    @Test
 //    public void usersCanSignInUponSelection() {

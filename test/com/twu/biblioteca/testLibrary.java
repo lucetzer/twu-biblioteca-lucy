@@ -1,27 +1,38 @@
 package com.twu.biblioteca;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import java.io.*;
+
 import static org.junit.Assert.assertEquals;
 
 public class testLibrary {
 
+
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    new PrintStream(outContent);
     private Book book1 = Mockito.mock(Book.class);
     private Book book2 = Mockito.mock(Book.class);
     private Movie movie1 = Mockito.mock(Movie.class);
     private Movie movie2 = Mockito.mock(Movie.class);
-    Library library = new Library(new PrintStream(outContent));
-
+//    Library library = new Library(new PrintStream(outContent));
+    Library library = new Library();
 
     @Test
-    public void testAddMenuItem() {
+    public void testAddMenuItem() throws IOException {
         library.menuItems.add("Quit");
         library.printMenu();
-        String actual = outContent.toString().trim();
-        assertEquals("MAIN MENU\n1. List library items\n2. Quit\nPlease make a selection by entering the number:", actual);
+        String name = reader.readLine();
+//        String actual = outContent.toString().trim();
+        assertEquals("MAIN MENU\n1. List library items\n2. Quit\nPlease make a selection by entering the number:", name);
     }
 
     @Test

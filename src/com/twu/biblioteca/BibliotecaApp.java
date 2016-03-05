@@ -11,9 +11,14 @@ public class BibliotecaApp {
 
 
     private static PrintStream out;
-    Library library;
+    Library library = new Library();
+    //        this.library = new Library(new PrintStream(out));
     LibraryItem book1, book2, book3, book4, book5, movie1, movie2, movie3, movie4, movie5;
     User user1, user2, user3;
+    LibraryManager libMgr = new LibraryManager();
+    UserManager userMgr;
+
+
 
     private static final int LIBRARYLIST = 1;
     private static final int SIGNIN = 2;
@@ -25,7 +30,6 @@ public class BibliotecaApp {
 
     public BibliotecaApp(PrintStream out) {
         this.out = out;
-        this.library = new Library(new PrintStream(out));
         book1 = new Book("THE PROPHET", "Kahlil Gibran", "1923");
         book2 = new Book("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
         book3 = new Book("THE CATCHER IN THE RYE", "J.D. Salinger", "1951");
@@ -41,8 +45,8 @@ public class BibliotecaApp {
         user1 = new User("Ringo Starr", "ringo@email.com", "06534374857", "111-2345", "letmein");
         user2 = new User("Amelia Hart", "amelia@email.com", "04545374857", "222-2345", "hellokitty");
         user3 = new User("Jin Chow", "jin@chow.com", "04545356857", "333-2345", "desert353");
+        setUpLibraryListsAndUsers();
     }
-
 
     public void setUpLibraryListsAndUsers() {
         library.bookList.add(book1);
@@ -60,12 +64,7 @@ public class BibliotecaApp {
         library.addToUserList(user1);
         library.addToUserList(user2);
         library.addToUserList(user3);
-
-    }
-
-
-    public void setUpUsers() {
-
+        userMgr = new UserManager(library.getUserList());
     }
 
     public void printWelcomeMsg() {
@@ -79,103 +78,9 @@ public class BibliotecaApp {
 ////    public void printInvalidMsg() {
 ////        out.print("Select a valid option!");
 ////    }
-//
-//    public void printPrompt() {
-//        out.print("Please make a selection by entering the number:");
-//    }
-//
-////    public void selectFromMenu(MainMenu menu, int option) {
-////        switch(option) {
-////            case BOOKLIST:
-////                menu.printBookList();
-////                prompt();
-////                break;
-////            case CHECKOUT:
-////                getCheckOutBookFromUser(menu);
-////                prompt();
-////                break;
-////            case RETURN:
-////                getReturnBookFromUser(menu);
-////                prompt();
-////                break;
-////            case QUIT:
-////                printGoodByeMsg();
-////                break;
-////            default:
-////                printInvalidMsg();
-////                break;
-////        }
-////    }
-//
-//    public void prompt() {
-//        printMenu();
-//        printPrompt();
-//    }
-//
-//    public enum ActionUserOption {
-//
-//        BOOKLIST(1),
-//        CHECKOUT(2),
-//        RETURN(3),
-//        QUIT(4);
-//
-//        int item;
-//
-//        public static ActionUserOption getOption(int selectedOption) {
-//            for(ActionUserOption option : values()) {
-//                if (selectedOption == option.item) {
-//                    return option;
-//                } else {
-//                    System.out.print("Select a valid option!");
-//                }
-//            }
-//        }
-//
-//
-//        BOOKLIST {
-//            public void go() {
-//                menu.printBookList();
-//                prompt(menu);
-//            }
-//        },
-//        CHECKOUT {
-//            public void go() {
-////                getCheckOutBookFromUser(menu);
-////                prompt(menu);
-//            }
-//        },
-//        RETURN {
-//            public void go() {
-////                getReturnBookFromUser(menu);
-////                prompt(menu);
-//            }
-//        },
-//        QUIT {
-//            public void go() {
-////                printGoodByeMsg();
-//                System.out.print("Select a valid option!");
-//
-//            }
-//        };
-//
-//    }
-//
-//
-//    public void getCheckOutBookFromUser(MainMenu menu) {
-//        out.println("Please enter the title of the book you wish to checkout:");
-//        Scanner scanner = new Scanner(System.in);
-//        String titleFromUser = scanner.nextLine();
-//        menu.removeBookFromList(titleFromUser);
-//    }
-//
-//    public void getReturnBookFromUser(MainMenu menu) {
-//        out.println("Please enter the title of the book you wish to return:");
-//        Scanner scanner = new Scanner(System.in);
-//        String titleFromUser = scanner.nextLine();
-//        menu.returnBook(titleFromUser);
-//    }
 
     public void selectFromMainMenu(int option) {
+//        System.out.println(userMgr.userList());
         switch(option) {
             case LIBRARYLIST:
                 out.println("\nBOOKS");
@@ -184,17 +89,27 @@ public class BibliotecaApp {
                 library.printMovieList();
                 library.printMenu();
             case SIGNIN:
-
+                out.println("Please enter your library number and password separated by a comma (e.g. 111-1111, password): ");
+                getInputFromUser();
+            default:
+                System.out.println("Please select a valid option.");
         }
     }
 
 
-
-
+    public void getInputFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String[] info = input.split(", ");
+        String libraryNumber = info[0];
+        String password = info[1];
+        System.out.println(libraryNumber);
+        System.out.println(password);
+        userMgr.signIn(libraryNumber, password);
+    }
 
     public static void main(String[] args) {
         BibliotecaApp biblib = new BibliotecaApp(System.out);
-        biblib.setUpLibraryListsAndUsers();
         biblib.printWelcomeMsg();
         biblib.library.menuItems.add("Sign in");
 

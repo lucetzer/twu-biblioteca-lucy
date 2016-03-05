@@ -31,7 +31,13 @@ public class testLibraryManager {
     }
 
     @Test
-    public void libraryCanKeepTrackOfCheckedOutItems() {
+    public void whenUserIsNotSignedIn() {
+        assertEquals("Please sign in first.", libraryMgr.checkUserSignIn(user));
+    }
+
+
+    @Test
+    public void canCheckOutOnlyIfUserIsSignedIn() {
         assertEquals(book1, libraryMgr.checkOutItem(bookList, book1, user));
         assertEquals(movie1, libraryMgr.checkOutItem(movieList, movie1, user));
     }

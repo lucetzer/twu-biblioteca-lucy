@@ -41,6 +41,11 @@ public class User {
         return status;
     }
 
+    public boolean signOut() {
+        status = false;
+        return false;
+    }
+
     public void addToBorrowedItems(Object item) {
         borrowedItems.add(item);
     }

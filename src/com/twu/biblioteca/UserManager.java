@@ -7,6 +7,7 @@ public class UserManager {
     private ArrayList<User> userList;
 
     public UserManager(ArrayList<User> userList) {
+//       super();
        this.userList = userList;
     }
 
