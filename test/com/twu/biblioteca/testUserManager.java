@@ -33,4 +33,10 @@ public class testUserManager {
         assertEquals(false, userMgr.signIn("333-2345", "password"));
     }
 
+//    @Test
+//    public void canPrintUserMenu() {
+//
+//    }
+//
+
 }

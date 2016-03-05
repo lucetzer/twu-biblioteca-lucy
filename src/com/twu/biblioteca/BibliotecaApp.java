@@ -1,8 +1,5 @@
 package com.twu.biblioteca;
 
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.io.PrintStream;
 
@@ -10,6 +7,8 @@ import java.io.PrintStream;
 public class BibliotecaApp {
 
     private static PrintStream out;
+//    PrintStream out = new PrintStream(System.out);
+
     Library library = new Library();
     //        this.library = new Library(new PrintStream(out));
     LibraryItem book1, book2, book3, book4, book5, movie1, movie2, movie3, movie4, movie5;
@@ -20,9 +19,18 @@ public class BibliotecaApp {
     private static final int LIBRARYLIST = 1;
     private static final int SIGNIN = 2;
     private static final int QUIT = 3;
+    private static final int CHECKOUT = 4;
+    private static final int RETURN = 5;
+    private static final int SIGNOUT= 6;
+
 
     public BibliotecaApp(PrintStream out) {
         this.out = out;
+
+        library.userMenu.add("Checkout Item");
+        library.userMenu.add("Return Book");
+        library.userMenu.add("Sign out");
+
         book1 = new Book("THE PROPHET", "Kahlil Gibran", "1923");
         book2 = new Book("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
         book3 = new Book("THE CATCHER IN THE RYE", "J.D. Salinger", "1951");
@@ -38,6 +46,7 @@ public class BibliotecaApp {
         user1 = new User("Ringo Starr", "ringo@email.com", "06534374857", "111-2345", "letmein");
         user2 = new User("Amelia Hart", "amelia@email.com", "04545374857", "222-2345", "hellokitty");
         user3 = new User("Jin Chow", "jin@chow.com", "04545356857", "333-2345", "desert353");
+
         setUpLibraryListsAndUsers();
     }
 
@@ -63,27 +72,16 @@ public class BibliotecaApp {
     public void printWelcomeMsg() {
         out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n");
     }
-//
-//    public void printGoodByeMsg() {
-//        out.println("Thank you for using Biblioteca. Goodbye");
-//    }
-//
-////    public void printInvalidMsg() {
-////        out.print("Select a valid option!");
-////    }
 
     public void selectFromMainMenu(int option) {
         switch(option) {
             case LIBRARYLIST:
-                out.println("\nBOOKS");
-                library.printBookList();
-                out.println("\nMOVIES");
-                library.printMovieList();
+                library.printItemList();
                 library.printMenu();
                 break;
             case SIGNIN:
                 out.println("Please enter your library number and password separated by a comma (e.g. 111-1111, password): ");
-                getInputFromUser();
+                getSignInInputFromUser();
                 break;
             case QUIT:
                 out.println("Thank you for using Biblioteca. Goodbye!");
@@ -93,36 +91,43 @@ public class BibliotecaApp {
         }
     }
 
-
-    public void getInputFromUser() {
+    public void getSignInInputFromUser() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         String[] info = input.split(", ");
         String libraryNumber = info[0];
         String password = info[1];
-        System.out.println(libraryNumber);
-        System.out.println(password);
         userMgr.signIn(libraryNumber, password);
     }
+
+    public void getOptionFromUserMenu() {
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.next();
+        int option = Integer.parseInt(line);
+//        selectFromUserMenu(option);
+    }
+
+    public void selectFromUserMenu(int option) {
+        library.printItemList();
+        switch(option) {
+            case CHECKOUT:
+                libMgr.checkedOutItems(option);
+        }
+    }
+
 
     public static void main(String[] args) {
         BibliotecaApp biblib = new BibliotecaApp(System.out);
         biblib.printWelcomeMsg();
         biblib.library.menuItems.add("Sign in");
         biblib.library.menuItems.add("Quit");
-
-
-
         biblib.library.printMenu();
         Scanner scanner = new Scanner(System.in);
-//
+
         while(true) {
             String line = scanner.next();
             int option = Integer.parseInt(line);
             biblib.selectFromMainMenu(option);
-//
-////            biblio.selectFromMenu(bookMenu, option);
-//            ActionUserOption.getOption(option, bookMenu).go();
         }
     }
 

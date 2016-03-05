@@ -16,14 +16,12 @@ public class LibraryManager extends Library {
 
     ArrayList<LibraryItem> checkedOutItems = new ArrayList<LibraryItem>();
 
-    public void checkUserSignIn(User user) {
-        if (user.getStatus()) {
-            printMenu(); //print checkout menu
-        }
-        System.out.println(USER_NOT_SIGNED_IN);
-    }
-
-
+//    public void checkUserSignIn(User user) {
+//        if (user.getStatus()) {
+//            printMenu(); //print checkout menu
+//        }
+//        System.out.println(USER_NOT_SIGNED_IN);
+//    }
 
 
     public Object checkOutItem(ArrayList categoryList, LibraryItem itemToCheckOut, User user) {
