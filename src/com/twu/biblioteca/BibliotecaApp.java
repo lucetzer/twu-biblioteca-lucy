@@ -9,7 +9,6 @@ import java.io.PrintStream;
 
 public class BibliotecaApp {
 
-
     private static PrintStream out;
     Library library = new Library();
     //        this.library = new Library(new PrintStream(out));
@@ -18,15 +17,9 @@ public class BibliotecaApp {
     LibraryManager libMgr = new LibraryManager();
     UserManager userMgr;
 
-
-
     private static final int LIBRARYLIST = 1;
     private static final int SIGNIN = 2;
-//    private static final int CHECKOUT = 2;
-//    private static final int RETURN = 3;
-//    private static final int QUIT = 4;
-//
-
+    private static final int QUIT = 3;
 
     public BibliotecaApp(PrintStream out) {
         this.out = out;
@@ -68,7 +61,7 @@ public class BibliotecaApp {
     }
 
     public void printWelcomeMsg() {
-        out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!");
+        out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n");
     }
 //
 //    public void printGoodByeMsg() {
@@ -80,7 +73,6 @@ public class BibliotecaApp {
 ////    }
 
     public void selectFromMainMenu(int option) {
-//        System.out.println(userMgr.userList());
         switch(option) {
             case LIBRARYLIST:
                 out.println("\nBOOKS");
@@ -88,9 +80,14 @@ public class BibliotecaApp {
                 out.println("\nMOVIES");
                 library.printMovieList();
                 library.printMenu();
+                break;
             case SIGNIN:
                 out.println("Please enter your library number and password separated by a comma (e.g. 111-1111, password): ");
                 getInputFromUser();
+                break;
+            case QUIT:
+                out.println("Thank you for using Biblioteca. Goodbye!");
+                System.exit(0);
             default:
                 System.out.println("Please select a valid option.");
         }
@@ -112,6 +109,8 @@ public class BibliotecaApp {
         BibliotecaApp biblib = new BibliotecaApp(System.out);
         biblib.printWelcomeMsg();
         biblib.library.menuItems.add("Sign in");
+        biblib.library.menuItems.add("Quit");
+
 
 
         biblib.library.printMenu();

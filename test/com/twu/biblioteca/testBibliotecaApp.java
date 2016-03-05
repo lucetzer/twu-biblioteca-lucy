@@ -23,7 +23,7 @@ public class testBibliotecaApp {
 //    public void shouldDisplayWelcomeMessage() throws Exception {
 //        bibApp.printWelcomeMsg();
 //        String actual = outContent.toString().trim();
-//        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
+//        String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n";
 //        assertEquals(message, actual);
 //    }
 //

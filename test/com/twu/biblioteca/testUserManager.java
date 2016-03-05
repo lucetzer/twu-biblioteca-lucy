@@ -12,7 +12,6 @@ public class testUserManager {
 
     Library lib = new Library();
     User user1 = Mockito.spy(new User("Ringo Starr", "ringo@email.com", "06534374857", "333-2345", "letmein"));
-
     ArrayList<User> userList = new ArrayList<User>();
 
     @Before

@@ -41,8 +41,9 @@ public class User {
         return status;
     }
 
-    public boolean signOut() {
+    public boolean signOut(Library library) {
         status = false;
+        library.printMenu();
         return false;
     }
 
