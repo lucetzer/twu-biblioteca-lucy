@@ -12,13 +12,12 @@ public class LibraryManager {
     ArrayList<LibraryItem> checkedOutItems = new ArrayList<LibraryItem>();
 
     public Object checkOutItem(ArrayList categoryList, LibraryItem itemToCheckOut, User user) {
-        for (Object categoryItem : categoryList) {
+        for (Object categoryItem : categoryList)
             if (categoryItem.equals(itemToCheckOut)) {
                 checkedOutItems.add(itemToCheckOut);
                 user.addToBorrowedItems(itemToCheckOut);
                 System.out.println("You've successfully checked out" + itemToCheckOut + ". Enjoy!");
                 return itemToCheckOut;
-            }
             }
         return UNAVAILABLE_MSG;
     }

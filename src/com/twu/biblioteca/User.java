@@ -18,7 +18,10 @@ public class User {
     }
 
     public String getUserInfo() {
-        return String.format("%-15s  %-25s  %s%n", name, email, phoneNumber);
+        if (status) {
+            return String.format("%-15s  %-25s  %s%n", name, email, phoneNumber);
+        }
+        return "Please sign in to see your details.";
     }
 
     public String getLibraryNumber() {

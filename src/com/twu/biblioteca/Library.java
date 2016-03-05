@@ -10,7 +10,6 @@ public class Library {
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List library items"));
     ArrayList<LibraryItem> bookList = new ArrayList<LibraryItem>();
     ArrayList<LibraryItem> movieList = new ArrayList<LibraryItem>();
-    ArrayList<LibraryItem> libraryList = new ArrayList<LibraryItem>();
     private ArrayList<User> userList = new ArrayList<User>();
 
     public Library(PrintStream out) {
@@ -24,6 +23,7 @@ public class Library {
             index += 1;
             out.println(index + ". " + item);
         }
+        out.println("Please make a selection by entering the number:");
     }
 
     public void printBookList() {

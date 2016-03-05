@@ -21,7 +21,7 @@ public class testLibrary {
         library.menuItems.add("Quit");
         library.printMenu();
         String actual = outContent.toString().trim();
-        assertEquals("MAIN MENU\n1. List library items\n2. Quit", actual);
+        assertEquals("MAIN MENU\n1. List library items\n2. Quit\nPlease make a selection by entering the number:", actual);
     }
 
     @Test

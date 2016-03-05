@@ -12,6 +12,8 @@ public class BibliotecaApp {
 
     private static PrintStream out;
     Library library;
+    LibraryItem book1, book2, book3, book4, book5, movie1, movie2, movie3, movie4, movie5;
+    User user1, user2, user3;
 
     private static final int LIBRARYLIST = 1;
     private static final int SIGNIN = 2;
@@ -24,6 +26,46 @@ public class BibliotecaApp {
     public BibliotecaApp(PrintStream out) {
         this.out = out;
         this.library = new Library(new PrintStream(out));
+        book1 = new Book("THE PROPHET", "Kahlil Gibran", "1923");
+        book2 = new Book("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
+        book3 = new Book("THE CATCHER IN THE RYE", "J.D. Salinger", "1951");
+        book4 = new Book("THE SOCIAL ANIMAL", "David Brooks", "2011");
+        book5 = new Book("LIFE OF PI", "Yann Martel", "2001");
+
+        movie1 = new Movie("THE GODFATHER", "1972", "Francis Ford Coppala", "8");
+        movie2 = new Movie("THE LIVES OF OTHERS", "2006", "Florian Henckel von Donnersmarck", "8");
+        movie3 = new Movie("PLAN 9 FROM OUTER SPACE", "1959", "Edward D. Wood Jr.", "4");
+        movie4 = new Movie("THE HUNT", "2012", "Thomas Vinterberg", "8");
+        movie5 = new Movie("OLD SCHOOL", "2003", "Todd Phillips", "7");
+
+        user1 = new User("Ringo Starr", "ringo@email.com", "06534374857", "111-2345", "letmein");
+        user2 = new User("Amelia Hart", "amelia@email.com", "04545374857", "222-2345", "hellokitty");
+        user3 = new User("Jin Chow", "jin@chow.com", "04545356857", "333-2345", "desert353");
+    }
+
+
+    public void setUpLibraryListsAndUsers() {
+        library.bookList.add(book1);
+        library.bookList.add(book2);
+        library.bookList.add(book3);
+        library.bookList.add(book4);
+        library.bookList.add(book5);
+
+        library.movieList.add(movie1);
+        library.movieList.add(movie2);
+        library.movieList.add(movie3);
+        library.movieList.add(movie4);
+        library.movieList.add(movie5);
+
+        library.addToUserList(user1);
+        library.addToUserList(user2);
+        library.addToUserList(user3);
+
+    }
+
+
+    public void setUpUsers() {
+
     }
 
     public void printWelcomeMsg() {
@@ -136,38 +178,28 @@ public class BibliotecaApp {
     public void selectFromMainMenu(int option) {
         switch(option) {
             case LIBRARYLIST:
-                out.println("BOOKS");
+                out.println("\nBOOKS");
                 library.printBookList();
-                out.println("MOVIES");
+                out.println("\nMOVIES");
                 library.printMovieList();
+                library.printMenu();
+            case SIGNIN:
+
         }
     }
 
 
+
+
+
     public static void main(String[] args) {
         BibliotecaApp biblib = new BibliotecaApp(System.out);
+        biblib.setUpLibraryListsAndUsers();
         biblib.printWelcomeMsg();
-//        PrintStream outContent = new PrintStream();
-//        Library library = new Library(out);
         biblib.library.menuItems.add("Sign in");
-        LibraryItem theProphet = new Book("THE PROPHET", "Kahlil Gibran", "1923");
 
-//        biblib.library.bookList.add(theProphet);
-        biblib.library.libraryList.add(theProphet);
-
-
-
-
-//
-//        put("THE PROPHET", "Kahlil Gibran", "1923");
-//        put("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
-//        put("THE CATCHER IN THE RYE", "J.D. Salinger", "1951");
-//        put("THE SOCIAL ANIMAL", "David Brooks, 2011");
-//        put("LIFE OF PI", "Yann Martel, 2001");
-//
 
         biblib.library.printMenu();
-        System.out.println("Please make a selection by entering the number:");
         Scanner scanner = new Scanner(System.in);
 //
         while(true) {
