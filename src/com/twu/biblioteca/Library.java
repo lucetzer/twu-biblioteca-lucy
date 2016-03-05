@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class Library {
 
-//    private final PrintStream out;
-    PrintStream out = new PrintStream(System.out);
+    private final PrintStream out;
+//    PrintStream out = new PrintStream(System.out);
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List library items"));
     ArrayList<String> userMenu = new ArrayList<String>();
 
@@ -17,9 +17,9 @@ public class Library {
     ArrayList<LibraryItem> movieList = new ArrayList<LibraryItem>();
     private ArrayList<User> userList = new ArrayList<User>();
 
-//    Library() {
-//        super();
-//    }
+    Library(PrintStream out) {
+        this.out = out;
+    }
 
     public void printMenu() {
         out.println("\nMAIN MENU");
@@ -32,6 +32,7 @@ public class Library {
     }
 
     public void printUserMenu() {
+        printItemList();
         System.out.println("\nUSER MENU");
         int index = 3;
         for (String item : userMenu) {
@@ -39,7 +40,7 @@ public class Library {
             System.out.println(index + ". " + item);
         }
         System.out.println("Please enter the title you wish to checkout:");
-        getOptionFromUserMenu();
+//        getOptionFromUserMenu();
     }
 
 //    public void printBookList() {
@@ -59,6 +60,8 @@ public class Library {
 //            out.print(index + ". " + movie.getInfo());
 //        }
 //    }
+
+
 
     public void printItemList() {
         System.out.println("\nBOOKS");

@@ -2,13 +2,11 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
-public class UserManager extends Library {
+public class UserManager {
 
     private ArrayList<User> userList;
-//    public ArrayList<String> userMenu = new ArrayList<String>();
 
     public UserManager(ArrayList<User> userList) {
-//       super()
         this.userList = userList;
     }
 
@@ -17,12 +15,12 @@ public class UserManager extends Library {
             if (user.getLibraryNumber().equals(libraryNumber) && user.getPassword().equals(password)) {
                 user.changeStatus();
                 System.out.println("You have successfully signed in.");
-                printUserMenu();
+//                printUserMenu();
                 return true;
             }
         }
         System.out.println("Incorrect library number or password.");
-        printMenu();
+//        printMenu();
         return false;
     }
 

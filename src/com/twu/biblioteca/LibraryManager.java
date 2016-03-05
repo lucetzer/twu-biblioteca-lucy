@@ -1,28 +1,14 @@
 package com.twu.biblioteca;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.List;
 
-public class LibraryManager extends Library {
-
-    LibraryManager() {
-        super();
-    }
+public class LibraryManager {
 
     private static final String UNAVAILABLE_MSG = "That item is not available.";
     private static final String INVALID_RETURN_MSG = "That is not a valid item to return";
-    private static final String USER_NOT_SIGNED_IN = "Please sign in first. Enter your library number and password separated by a comma";
+//    private static final String USER_NOT_SIGNED_IN = "Please sign in first. Enter your library number and password separated by a comma";
 
     ArrayList<LibraryItem> checkedOutItems = new ArrayList<LibraryItem>();
-
-//    public void checkUserSignIn(User user) {
-//        if (user.getStatus()) {
-//            printMenu(); //print checkout menu
-//        }
-//        System.out.println(USER_NOT_SIGNED_IN);
-//    }
-
 
     public Object checkOutItem(ArrayList categoryList, LibraryItem itemToCheckOut, User user) {
         for (Object categoryItem : categoryList)

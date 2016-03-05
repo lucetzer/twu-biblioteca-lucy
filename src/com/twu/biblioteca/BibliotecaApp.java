@@ -6,11 +6,9 @@ import java.io.PrintStream;
 
 public class BibliotecaApp {
 
-    private static PrintStream out;
-//    PrintStream out = new PrintStream(System.out);
+    PrintStream out = new PrintStream(System.out);
 
-    Library library = new Library();
-    //        this.library = new Library(new PrintStream(out));
+    Library library = new Library(new PrintStream(out));
     LibraryItem book1, book2, book3, book4, book5, movie1, movie2, movie3, movie4, movie5;
     User user1, user2, user3;
     LibraryManager libMgr = new LibraryManager();
@@ -24,8 +22,8 @@ public class BibliotecaApp {
     private static final int SIGNOUT= 6;
 
 
-    public BibliotecaApp(PrintStream out) {
-        this.out = out;
+    public BibliotecaApp() {
+//        this.out = out;
 
         library.userMenu.add("Checkout Item");
         library.userMenu.add("Return Book");
@@ -103,21 +101,28 @@ public class BibliotecaApp {
     public void getOptionFromUserMenu() {
         Scanner scanner = new Scanner(System.in);
         String line = scanner.next();
-        int option = Integer.parseInt(line);
-//        selectFromUserMenu(option);
+//        identifyItem(line);
+//        selectFromUserMenu();
     }
 
-    public void selectFromUserMenu(int option) {
-        library.printItemList();
-        switch(option) {
-            case CHECKOUT:
-                libMgr.checkedOutItems(option);
-        }
-    }
+//    public Object identifyItem(String line) {
+//
+//    }
+//
+//
+//
+//
+//    public void selectFromUserMenu(int option) {
+//        library.printItemList();
+//        switch(option) {
+//            case CHECKOUT:
+//                libMgr.checkedOutItems(option);
+//        }
+//    }
 
 
     public static void main(String[] args) {
-        BibliotecaApp biblib = new BibliotecaApp(System.out);
+        BibliotecaApp biblib = new BibliotecaApp();
         biblib.printWelcomeMsg();
         biblib.library.menuItems.add("Sign in");
         biblib.library.menuItems.add("Quit");
