@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -9,17 +10,22 @@ import java.io.PrintStream;
 public class BibliotecaApp {
 
 
-    private final PrintStream out;
+    private static PrintStream out;
+    Library library;
 
-    public BibliotecaApp(PrintStream out) {
-        this.out = out;
-    }
-
-//    private static final int BOOKLIST = 1;
+    private static final int LIBRARYLIST = 1;
+    private static final int SIGNIN = 2;
 //    private static final int CHECKOUT = 2;
 //    private static final int RETURN = 3;
 //    private static final int QUIT = 4;
 //
+
+
+    public BibliotecaApp(PrintStream out) {
+        this.out = out;
+        this.library = new Library(new PrintStream(out));
+    }
+
     public void printWelcomeMsg() {
         out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!");
     }
@@ -126,26 +132,52 @@ public class BibliotecaApp {
 //        String titleFromUser = scanner.nextLine();
 //        menu.returnBook(titleFromUser);
 //    }
+
+    public void selectFromMainMenu(int option) {
+        switch(option) {
+            case LIBRARYLIST:
+                out.println("BOOKS");
+                library.printBookList();
+                out.println("MOVIES");
+                library.printMovieList();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        BibliotecaApp biblib = new BibliotecaApp(System.out);
+        biblib.printWelcomeMsg();
+//        PrintStream outContent = new PrintStream();
+//        Library library = new Library(out);
+        biblib.library.menuItems.add("Sign in");
+        LibraryItem theProphet = new Book("THE PROPHET", "Kahlil Gibran", "1923");
+
+//        biblib.library.bookList.add(theProphet);
+        biblib.library.libraryList.add(theProphet);
+
+
+
+
 //
-//    public static void main(String[] args) {
-//        BibliotecaApp biblio = new BibliotecaApp(System.out);
-//        biblio.printWelcomeMsg();
-//        MainMenu bookMenu = new MainMenu();
-//        biblio.addMenuItem("Checkout book");
-//        biblio.addMenuItem("Return book");
-//        biblio.addMenuItem("Quit");
-//        biblio.printMenu();
+//        put("THE PROPHET", "Kahlil Gibran", "1923");
+//        put("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
+//        put("THE CATCHER IN THE RYE", "J.D. Salinger", "1951");
+//        put("THE SOCIAL ANIMAL", "David Brooks, 2011");
+//        put("LIFE OF PI", "Yann Martel, 2001");
 //
-//        System.out.println("Please make a selection by entering the number:");
+
+        biblib.library.printMenu();
+        System.out.println("Please make a selection by entering the number:");
+        Scanner scanner = new Scanner(System.in);
 //
-//        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            String line = scanner.next();
+            int option = Integer.parseInt(line);
+            biblib.selectFromMainMenu(option);
 //
-//        while(true) {
-//            String line = scanner.next();
-//            int option = Integer.parseInt(line);
 ////            biblio.selectFromMenu(bookMenu, option);
 //            ActionUserOption.getOption(option, bookMenu).go();
-//        }
-//    }
+        }
+    }
 
 }

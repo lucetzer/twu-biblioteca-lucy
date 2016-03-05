@@ -10,7 +10,7 @@ public class testBook {
     @Test
     public void shouldDisplayBookTitleAuthorYear() {
         String expected = "THE LIFE OF PI             Yann Martel      2001\n";
-        assertEquals(expected, book.getBookDetails());
+        assertEquals(expected, book.getInfo());
     }
 
 }

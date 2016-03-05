@@ -14,6 +14,7 @@ public class UserManager {
         for (User user : userList) {
             if (user.getLibraryNumber().equals(libraryNumber) && user.getPassword().equals(password)) {
                 user.changeStatus();
+                System.out.println("You have successfully signed in");
                 return true;
             }
         }

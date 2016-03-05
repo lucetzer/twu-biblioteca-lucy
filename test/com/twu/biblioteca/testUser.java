@@ -43,4 +43,10 @@ public class testUser {
         assertEquals(book, user.getBorrowedItems().get(0));
     }
 
+//    @Test
+//    public void shouldSeeUserInfoIfLoggedOn() {
+//        String expected = "Ringo Starr, ringo@email.com, 06534374857, 333-2345, letmein";
+//        assertEquals(expected, user.getUserInfo());
+//    }
+
 }

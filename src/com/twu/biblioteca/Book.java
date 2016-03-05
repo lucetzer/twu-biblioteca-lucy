@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Book {
+public class Book extends LibraryItem {
 
     private String title;
     private String author;
@@ -12,7 +12,7 @@ public class Book {
         this.year = year;
     }
 
-    public String getBookDetails() {
+    public String getInfo() {
         return String.format("%-25s  %-15s  %s%n", title, author, year);
     }
 

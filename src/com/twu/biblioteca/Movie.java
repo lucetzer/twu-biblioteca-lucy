@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Movie {
+public class Movie extends LibraryItem {
 
     private String title;
     private String year;
@@ -14,7 +14,7 @@ public class Movie {
         this.rating = rating;
     }
 
-    public String getMovieDetails() {
+    public String getInfo() {
         return String.format("%-25s  %-5s  %-25s  %s%n", title, year, director, rating);
     }
 

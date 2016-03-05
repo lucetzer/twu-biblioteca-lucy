@@ -7,9 +7,10 @@ import java.util.Arrays;
 public class Library {
 
     private final PrintStream out;
-    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List Books"));
-    ArrayList<Book> bookList = new ArrayList<Book>();
-    ArrayList<Movie> movieList = new ArrayList<Movie>();
+    ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List library items"));
+    ArrayList<LibraryItem> bookList = new ArrayList<LibraryItem>();
+    ArrayList<LibraryItem> movieList = new ArrayList<LibraryItem>();
+    ArrayList<LibraryItem> libraryList = new ArrayList<LibraryItem>();
     private ArrayList<User> userList = new ArrayList<User>();
 
     public Library(PrintStream out) {
@@ -27,17 +28,17 @@ public class Library {
 
     public void printBookList() {
         int index = 0;
-        for (Book book : bookList) {
+        for (LibraryItem book : bookList) {
             index += 1;
-            out.print(index + ". " + book.getBookDetails());
+            out.print(index + ". " + book.getInfo());
         }
     }
 
     public void printMovieList() {
         int index = 0;
-        for (Movie movie : movieList) {
+        for (LibraryItem movie : movieList) {
             index += 1;
-            out.print(index + ". " + movie.getMovieDetails());
+            out.print(index + ". " + movie.getInfo());
         }
     }
 
@@ -50,7 +51,7 @@ public class Library {
     }
 
     public boolean removeBookFromList(Book book) {
-        for (Book item : bookList) {
+        for (LibraryItem item : bookList) {
             if (item.equals(book)) {
                 bookList.remove(item);
                 return true;
@@ -60,7 +61,7 @@ public class Library {
     }
 
     public boolean removeMovieFromList(Movie movie) {
-        for (Movie item : movieList) {
+        for (LibraryItem item : movieList) {
             if (item.equals(movie)) {
                 movieList.remove(item);
                 return true;

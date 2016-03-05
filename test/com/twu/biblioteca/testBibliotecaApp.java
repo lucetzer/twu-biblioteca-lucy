@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -12,19 +13,32 @@ import static org.junit.Assert.assertEquals;
 
 public class testBibliotecaApp {
 
-//    BibliotecaApp biblioteca = new BibliotecaApp();
-//    User user = new User();
-//    MainMenu menu = new MainMenu();
-
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    BibliotecaApp bibApp = new BibliotecaApp(new PrintStream(outContent));
+//    Library library = Mockito.mock(Library.class);
+    Library library = new Library(new PrintStream(outContent));
+    User user1 = Mockito.mock(User.class);
 
     @Test
     public void shouldDisplayWelcomeMessage() throws Exception {
-        new BibliotecaApp(new PrintStream(outContent)).printWelcomeMsg();
+        bibApp.printWelcomeMsg();
         String actual = outContent.toString().trim();
         String message = "Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!";
         assertEquals(message, actual);
     }
+
+    @Test
+    public void anyUserCanSeeLibraryItems() {
+        String expected = "test";
+        bibApp.selectFromMainMenu(1);
+        String actual = outContent.toString().trim();
+        assertEquals(expected, actual);
+    }
+
+//    @Test
+//    public void usersCanSignInUponSelection() {
+//        bibApp.selectFromMainMenu(1);
+//    }
 
 //    @Before
 //    public void setUpStreams() {
