@@ -8,9 +8,7 @@ import java.util.regex.Pattern;
 
 public class BibliotecaApp {
 
-    PrintStream out = new PrintStream(System.out);
-
-//    Library library = new Library(new PrintStream(out));
+    PrintStream out;
     Library library = new Library();
     LibraryItem book1, book2, book3, book4, book5, movie1, movie2, movie3, movie4, movie5;
     User user1, user2, user3;
@@ -21,8 +19,8 @@ public class BibliotecaApp {
     private static final int QUIT = 3;
     private static final String PASS_MSG = "Please enter your library number and password separated by a comma and space (e.g. 111-1111, password): ";
 
-    public BibliotecaApp() {
-//        this.out = out;
+    public BibliotecaApp(PrintStream out) {
+        this.out = out;
 
         book1 = new Book("THE PROPHET", "Kahlil Gibran", "1923");
         book2 = new Book("TO KILL A MOCKINGBIRD", "Harper Lee", "1960");
@@ -64,7 +62,7 @@ public class BibliotecaApp {
     }
 
     public void printWelcomeMsg() {
-        System.out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n");
+        out.println("Hello and welcome to Biblioteca! There is no friend as loyal as a book so find yours!\n");
     }
 
     public void selectFromMenu(int option) {
@@ -74,14 +72,14 @@ public class BibliotecaApp {
                 library.printMenu();
                 break;
             case SIGNIN:
-                System.out.println(PASS_MSG);
+                out.println(PASS_MSG);
                 getSignInInputFromUser();
                 break;
             case QUIT:
-                System.out.println("Thank you for using Biblioteca. Goodbye!");
+                out.println("Thank you for using Biblioteca. Goodbye!");
                 System.exit(0);
             default:
-                System.out.println("Please select a valid option.");
+                out.println("Please select a valid option.");
         }
     }
 
@@ -102,17 +100,21 @@ public class BibliotecaApp {
     }
 
     public static void main(String[] args) {
-        BibliotecaApp biblib = new BibliotecaApp();
-        biblib.printWelcomeMsg();
-        biblib.library.menuItems.add("Sign in");
-        biblib.library.menuItems.add("Quit");
-        biblib.library.printMenu();
+      new BibliotecaApp(System.out).run();
+
+    }
+
+    public void run() {
+        printWelcomeMsg();
+        library.menuItems.add("Sign in");
+        library.menuItems.add("Quit");
+        library.printMenu();
         Scanner scanner = new Scanner(System.in);
 
         while(true) {
             String line = scanner.next();
             int option = Integer.parseInt(line);
-            biblib.selectFromMenu(option);
+            selectFromMenu(option);
         }
     }
 

@@ -8,28 +8,25 @@ import org.junit.Before;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 
 public class testUserManager {
 
-//    Library lib = Mockito.mock(Library.class);
-    Library lib = new Library();
+    Library lib = Mockito.spy(new Library());
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     UserManager userMgr = new UserManager(lib, new PrintStream(outContent));
     User user1 = Mockito.spy(new User("Ringo Starr", "ringo@email.com", "06534374857", "333-2345", "letmein"));
-//    ArrayList<User> userList = new ArrayList<User>();
-
 
     @Before
     public void setUp() {
-//        userList.add(user1);
+        lib.addToUserList(user1);
     }
 
-//    @Test
-//    public void testUserCanSuccessfullySignIn() {
-//        lib.addToUserList(user1);
-//        assertEquals(true, userMgr.signIn("333-2345", "letmein"));
-//    }
+    @Test
+    //not sure why test keeps running
+    public void testUserCanSuccessfullySignIn() {
+        lib.addToUserList(user1);
+        assertEquals(true, userMgr.signIn("333-2345", "letmein"));
+    }
 
     @Test
     public void testUnsuccessfulUserLogin() {
@@ -37,10 +34,19 @@ public class testUserManager {
     }
 
     @Test
+    //not sure why test keeps running
     public void canPrintUserMenu() {
         userMgr.printMenu();
         String actual = outContent.toString().trim();
         assertEquals("test", actual);
     }
+
+    @Test
+    public void userCannotSeeDetailsWithoutBeingSignedIn() {
+        userMgr.selectFromUserMenu(1, user1);
+        String actual = outContent.toString().trim();
+        assertEquals("Please sign in to see your details.", actual);
+    }
+
 
 }
