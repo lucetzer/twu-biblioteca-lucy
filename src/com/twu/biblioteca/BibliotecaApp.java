@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class BibliotecaApp {
 
-//    PrintStream out = new PrintStream(System.out);
+    PrintStream out = new PrintStream(System.out);
 
 //    Library library = new Library(new PrintStream(out));
     Library library = new Library();
@@ -41,6 +41,8 @@ public class BibliotecaApp {
         user3 = new User("Jin Chow", "jin@chow.com", "04545356857", "333-2345", "desert353");
 
         setUpLibraryListsAndUsers();
+        userMgr = new UserManager(library, new PrintStream(out));
+
     }
 
     public void setUpLibraryListsAndUsers() {
@@ -59,7 +61,6 @@ public class BibliotecaApp {
         library.addToUserList(user1);
         library.addToUserList(user2);
         library.addToUserList(user3);
-        userMgr = new UserManager(library);
     }
 
     public void printWelcomeMsg() {

@@ -1,9 +1,13 @@
 package com.twu.biblioteca;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserManager {
+
+
+    private final PrintStream out;
 
     ArrayList<String> userMenu = new ArrayList<String>();
     private static final String INVALID_MSG = "Incorrect library number or password. Returning you back to the main menu.";
@@ -14,8 +18,9 @@ public class UserManager {
     Library library;
     User currentUser;
 
-    public UserManager(Library library) {
+    public UserManager(Library library, PrintStream out) {
         this.library = library;
+        this.out = out;
         userMenu.add("My details");
         userMenu.add("Check out item");
         userMenu.add("Return item");
@@ -27,7 +32,7 @@ public class UserManager {
             if (user.getLibraryNumber().equals(libraryNumber) && user.getPassword().equals(password)) {
                 user.changeStatus();
                 currentUser = user;
-                System.out.println("You have successfully signed in.");
+                out.println("You have successfully signed in.");
                 printMenu();
                 return true;
             }
@@ -38,13 +43,13 @@ public class UserManager {
     }
 
     public void printMenu() {
-        System.out.println("\nUSER MENU");
+        out.println("\nUSER MENU");
         int index = 0;
         for (String item : userMenu) {
             index += 1;
-            System.out.println(index + ". " + item);
+            out.println(index + ". " + item);
         }
-        System.out.println("Please select a number:");
+        out.println("Please select a number:");
         getOptionFromUserMenu();
     }
 
@@ -83,17 +88,17 @@ public class UserManager {
     }
 
     public void getCheckOutItemFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        String title = scanner.nextLine().toUpperCase();
-        System.out.println(title);
-        library.checkOutItem(title, currentUser);
+        library.checkOutItem(getUserInput(), currentUser);
     }
 
     public void getReturnItemFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        String title = scanner.nextLine().toUpperCase();
-        System.out.println(title);
-        library.returnItem(title, currentUser);
+        library.returnItem(getUserInput(), currentUser);
     }
+
+    public String getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine().toUpperCase();
+    }
+
 
 }

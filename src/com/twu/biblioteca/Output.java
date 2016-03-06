@@ -16,6 +16,4 @@ public class Output implements UserOutput {
         return message;
     }
 
-
-
 }
