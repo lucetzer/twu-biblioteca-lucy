@@ -18,5 +18,8 @@ public class Movie extends LibraryItem {
         return String.format("%-25s  %-5s  %-25s  %s%n", title, year, director, rating);
     }
 
+    public String getName() {
+        return title;
+    }
 
 }

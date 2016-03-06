@@ -13,4 +13,9 @@ public class testBook {
         assertEquals(expected, book.getInfo());
     }
 
+    @Test
+    public void shouldReturnBookTitle() {
+        assertEquals("THE LIFE OF PI", book.getName());
+    }
+
 }

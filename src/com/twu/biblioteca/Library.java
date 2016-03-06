@@ -1,76 +1,44 @@
 package com.twu.biblioteca;
 
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Library {
 
-    private final PrintStream out;
+
+    protected UserOutput output;
+//    private final PrintStream out;
 //    PrintStream out = new PrintStream(System.out);
     ArrayList<String> menuItems = new ArrayList<String>(Arrays.asList("List library items"));
-    ArrayList<String> userMenu = new ArrayList<String>();
+//    ArrayList<String> userMenu = new ArrayList<String>();
 
     ArrayList<LibraryItem> bookList = new ArrayList<LibraryItem>();
     ArrayList<LibraryItem> movieList = new ArrayList<LibraryItem>();
     private ArrayList<User> userList = new ArrayList<User>();
+    private static final String UNAVAILABLE_MSG = "That item is not available.";
+    private static final String INVALID_RETURN_MSG = "That is not a valid item to return";
+    ArrayList<LibraryItem> checkedOutItems = new ArrayList<LibraryItem>();
 
-    Library(PrintStream out) {
-        this.out = out;
-    }
 
     public void printMenu() {
-        out.println("\nMAIN MENU");
+        System.out.println("\nMAIN MENU");
         int index = 0;
         for (String item : menuItems) {
             index += 1;
-            out.println(index + ". " + item);
-        }
-        out.println("Please make a selection by entering the number:");
-    }
-
-    public void printUserMenu() {
-        printItemList();
-        System.out.println("\nUSER MENU");
-        int index = 3;
-        for (String item : userMenu) {
-            index += 1;
             System.out.println(index + ". " + item);
         }
-        System.out.println("Please enter the title you wish to checkout:");
-//        getOptionFromUserMenu();
+        System.out.println("Please make a selection by entering the number:");
     }
-
-//    public void printBookList() {
-////        int index = 0;
-//        System.out.println("\nBOOKS");
-//        for (LibraryItem book : bookList) {
-////            index += 1;
-////            out.print(index + ". " + book.getInfo());
-//            out.print(book.getInfo());
-//        }
-//    }
-//
-//    public void printMovieList() {
-////        int index = 0;
-//        for (LibraryItem movie : movieList) {
-//            index += 1;
-//            out.print(index + ". " + movie.getInfo());
-//        }
-//    }
-
-
 
     public void printItemList() {
         System.out.println("\nBOOKS");
         for (LibraryItem book : bookList) {
-            out.print(book.getInfo());
+            System.out.print(book.getInfo());
         }
         System.out.println("\nMOVIES");
         for (LibraryItem movie : movieList) {
-            out.print(movie.getInfo());
+            System.out.print(movie.getInfo());
         }
     }
 
@@ -82,24 +50,47 @@ public class Library {
         return userList;
     }
 
-    public boolean removeBookFromList(Book book) {
-        for (LibraryItem item : bookList) {
-            if (item.equals(book)) {
-                bookList.remove(item);
-                return true;
+
+
+    public Object checkOutItem(String selectedItem, User currentUser) {
+        for (LibraryItem book : bookList) {
+            if (selectedItem.equals(book.getName())) {
+                checkedOutItems.add(book);
+                currentUser.addToBorrowedItems(book);
+                System.out.println("You've successfully checked out " + book.getName() + ". Enjoy!");
+                bookList.remove(book);
+                return book;
             }
         }
-        return false;
+        for (LibraryItem movie : movieList) {
+            if (selectedItem.equals(movie.getName())) {
+                checkedOutItems.add(movie);
+                currentUser.addToBorrowedItems(movie);
+                System.out.println("You've successfully checked out " + movie.getName() + ". Enjoy!");
+                movieList.remove(movie);
+                return movie;
+            }
+        }
+        return UNAVAILABLE_MSG;
     }
 
-    public boolean removeMovieFromList(Movie movie) {
-        for (LibraryItem item : movieList) {
-            if (item.equals(movie)) {
-                movieList.remove(item);
-                return true;
+    public Object returnItem(String itemToReturn, User user) {
+        for (LibraryItem item : checkedOutItems) {
+            if (itemToReturn.equals(item.getName())) {
+                System.out.println("Thank you for returning " + itemToReturn + ".");
+                addItemBackToRelevantList(item);
+                user.removeFromBorrowedItems(item);
             }
         }
-        return false;
+        return INVALID_RETURN_MSG;
+    }
+
+    public void addItemBackToRelevantList(LibraryItem item) {
+        if (item instanceof Book) {
+            bookList.add(item);
+        } else {
+            movieList.add(item);
+        }
     }
 
 }

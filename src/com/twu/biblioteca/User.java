@@ -8,6 +8,7 @@ public class User {
     private String name, email, phoneNumber, libraryNumber, password;
     private boolean status;
     private List<Object> borrowedItems = new ArrayList<Object>();
+    private static final String NOT_SIGNED_IN_MSG = "Please sign in to see your details.";
 
     public User(String name, String email, String number, String libraryNumber, String password) {
         this.name = name;
@@ -19,9 +20,12 @@ public class User {
 
     public String getUserInfo() {
         if (status) {
+            System.out.println(String.format("%-15s  %-25s  %s%n", name, email, phoneNumber));
             return String.format("%-15s  %-25s  %s%n", name, email, phoneNumber);
+        } else {
+            System.out.println(NOT_SIGNED_IN_MSG);
+            return NOT_SIGNED_IN_MSG;
         }
-        return "Please sign in to see your details.";
     }
 
     public String getLibraryNumber() {
@@ -41,14 +45,17 @@ public class User {
         return status;
     }
 
-    public boolean signOut(Library library) {
+    public boolean signOut() {
         status = false;
-        library.printMenu();
         return false;
     }
 
     public void addToBorrowedItems(Object item) {
         borrowedItems.add(item);
+    }
+
+    public void removeFromBorrowedItems(Object item) {
+        borrowedItems.remove(item);
     }
 
     public List<Object> getBorrowedItems() {

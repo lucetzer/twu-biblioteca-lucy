@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 import java.io.ByteArrayOutputStream;
@@ -15,7 +16,10 @@ public class testLibrary {
     private Book book2 = Mockito.mock(Book.class);
     private Movie movie1 = Mockito.mock(Movie.class);
     private Movie movie2 = Mockito.mock(Movie.class);
-    Library library = new Library(new PrintStream(outContent));
+//    Library library = new Library(new PrintStream(outContent));
+    Library library = new Library();
+    private User user1 = Mockito.mock(User.class);
+
 
     Book book3 = Mockito.spy(new Book("LIFE OF PI", "Yann Martel", "2001"));
     Book book4 = Mockito.spy(new Book("THE CATCHER IN THE RYE", "J.D. Salinger", "1951"));
@@ -31,18 +35,38 @@ public class testLibrary {
                     "THE LIVES OF OTHERS        2006   Florian Henckel von Donnersmarck  8\n" +
                     "28 DAYS LATER              2002   Danny Boyle                7";
 
-    @Test
-    public void testAddMenuItem() throws IOException {
-        library.menuItems.add("Quit");
-        library.printMenu();
-        String actual = outContent.toString().trim();
-        assertEquals("MAIN MENU\n1. List library items\n2. Quit\nPlease make a selection by entering the number:", actual);
+//    @Test
+//    public void testAddMenuItem() throws IOException {
+//        library.menuItems.add("Quit");
+//        library.printMenu();
+//        String actual = outContent.toString().trim();
+//        assertEquals("MAIN MENU\n1. List library items\n2. Quit\nPlease make a selection by entering the number:", actual);
+//    }
+
+
+
+//    @Test
+//    public void canPrintItemList() {
+//        library.bookList.add(book3);
+//        library.bookList.add(book4);
+//        library.bookList.add(book5);
+//        library.movieList.add(movie3);
+//        library.movieList.add(movie4);
+//        library.printItemList();
+//        String actual = outContent.toString().trim();
+//        assertEquals(expectedItemList, actual);
+//    }
+
+    @Before
+    public void setUp() {
+        library.bookList.add(book1);
+        library.bookList.add(book2);
+        library.movieList.add(movie1);
+        library.movieList.add(movie2);
     }
 
     @Test
     public void canAddBookToLibraryBookList() {
-        library.bookList.add(book1);
-        library.bookList.add(book2);
         assertEquals(book1, library.bookList.get(0));
         assertEquals(book2, library.bookList.get(1));
         assertEquals(2, library.bookList.size());
@@ -50,40 +74,10 @@ public class testLibrary {
 
     @Test
     public void canAddMovieToLibraryMovieList() {
-        library.movieList.add(movie1);
-        library.movieList.add(movie2);
         assertEquals(movie1, library.movieList.get(0));
         assertEquals(movie2, library.movieList.get(1));
         assertEquals(2, library.movieList.size());
     }
-
-    @Test
-    public void canRemoveBorrowedBooksFromList() {
-        library.bookList.add(book1);
-        library.removeBookFromList(book1);
-        assertEquals(false, library.bookList.contains(book1));
-    }
-
-    @Test
-    public void canRemoveBorrowedMovieFromList() {
-        library.movieList.add(movie1);
-        library.removeMovieFromList(movie1);
-        assertEquals(false, library.movieList.contains(movie1));
-    }
-
-    @Test
-    public void canPrintItemList() {
-        library.bookList.add(book3);
-        library.bookList.add(book4);
-        library.bookList.add(book5);
-        library.movieList.add(movie3);
-        library.movieList.add(movie4);
-        library.printItemList();
-        String actual = outContent.toString().trim();
-        assertEquals(expectedItemList, actual);
-    }
-
-    private User user1 = Mockito.mock(User.class);
 
     @Test
     public void canAddAndGetUserList() {

@@ -16,4 +16,9 @@ public class Book extends LibraryItem {
         return String.format("%-25s  %-15s  %s%n", title, author, year);
     }
 
+    public String getName() {
+        return title;
+    }
+
+
 }

@@ -13,6 +13,11 @@ public class testMovie {
         assertEquals(expected, movie.getInfo());
     }
 
+    @Test
+    public void canReturnTitle() {
+        assertEquals("THE LIVES OF OTHERS", movie.getName());
+    }
+
 }
 
 

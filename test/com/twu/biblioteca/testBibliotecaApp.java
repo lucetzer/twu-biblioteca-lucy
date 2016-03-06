@@ -1,18 +1,18 @@
-package com.twu.biblioteca;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mockito;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.Assert.assertEquals;
-
-
-public class testBibliotecaApp {
-
+//package com.twu.biblioteca;
+//
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
+//import org.mockito.Mockito;
+//
+//import java.io.ByteArrayOutputStream;
+//import java.io.PrintStream;
+//
+//import static org.junit.Assert.assertEquals;
+//
+//
+//public class testBibliotecaApp {
+//
 //    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 //    BibliotecaApp bibApp = new BibliotecaApp(new PrintStream(outContent));
 ////    Library library = Mockito.mock(Library.class);
@@ -34,12 +34,12 @@ public class testBibliotecaApp {
 //        String actual = outContent.toString().trim();
 //        assertEquals(expected, actual);
 //    }
-
+//
 //    @Test
 //    public void usersCanSignInUponSelection() {
 //        bibApp.selectFromMainMenu(1);
 //    }
-
+//
 //    @Before
 //    public void setUpStreams() {
 //        System.setOut(new PrintStream(outContent));
@@ -61,10 +61,5 @@ public class testBibliotecaApp {
 //        biblioteca.selectFromMenu(menu, 4, user);
 //        assertEquals("Goodbye!", outContent.toString());
 //    }
-
-//    @Test
-//    public void testScannerInput() {
-//        String message =
-//    }
-
-}
+////
+//}
