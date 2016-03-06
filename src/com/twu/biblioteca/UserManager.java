@@ -69,7 +69,6 @@ public class UserManager {
                 System.out.println("Please enter the title you wish to return:");
                 getReturnItemFromUser();
                 printMenu();
-            printMenu();
                 break;
             case SIGNOUT:
                 currentUser.signOut();
